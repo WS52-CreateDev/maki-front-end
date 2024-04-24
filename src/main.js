@@ -1,7 +1,9 @@
+import './assets/main.css'
+
 import { createApp } from 'vue';
 import PrimeVue from 'primevue/config';
-import { createI18n } from 'vue-i18n';
 import App from './App.vue';
+import i18n from "./locales/i18n.js";
 import router from './router';
 
 // Estilos de PrimeVue y otros recursos
@@ -30,16 +32,6 @@ import InputNumber from 'primevue/inputnumber';
 import InputMask from 'primevue/inputmask';
 import Message from 'primevue/message';
 import ButtonGroup from 'primevue/buttongroup';
-
-// Configuración de i18n
-const i18n = createI18n({
-    locale: 'en',
-    messages: {
-        en: {
-            Hello: 'Hello'
-        }
-    }
-});
 
 createApp(App)
     .use(router)
