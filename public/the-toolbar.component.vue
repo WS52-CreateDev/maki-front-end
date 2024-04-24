@@ -68,6 +68,8 @@ export default {
 }
 .menu-overlay {
   position: absolute;
+  margin-top: 9rem;
+  margin-left: 1rem;
   z-index: 1;
 }
 @media (hover: hover) {
