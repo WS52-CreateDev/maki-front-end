@@ -32,6 +32,8 @@ import InputNumber from 'primevue/inputnumber';
 import InputMask from 'primevue/inputmask';
 import Message from 'primevue/message';
 import ButtonGroup from 'primevue/buttongroup';
+import IconField from "primevue/iconfield";
+import InputIcon from "primevue/inputicon";
 
 createApp(App)
     .use(router)
@@ -56,4 +58,6 @@ createApp(App)
     .component('PvInputMask', InputMask)
     .component('PvMessage', Message)
     .component('PvButtonGroup', ButtonGroup)
+    .component('PvIconField', IconField)
+    .component('PvInputIcon', InputIcon)
     .mount('#app');
