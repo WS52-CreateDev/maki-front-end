@@ -44,5 +44,23 @@
       "password": "password123",
       "photo": "https://example.com/artisan1.jpg"
     }
+  ],
+  "design":[
+    {
+      "id":1,
+      "name": "Un bello patron",
+      "caracteristics": "Buenas, me gustaria que diseñara un mate con este modelo. Estoy pato a cualquier precio porque vale la pena el recuerdo. Gracias",
+      "photo":"https://shorturl.at/sALT0",
+      "width": "20 cm",
+      "height": "25 cm"
+    },
+    {
+      "id":2,
+      "name": "Mi persona",
+      "caracteristics": "Buenas, me gustaria que diseñara un mate con este diseño porque me representa jaja. Estaré atento a su respuesta. Gracias",
+      "photo":"https://shorturl.at/ciCM9",
+      "width": "20 cm",
+      "height": "25 cm"
+    }
   ]
 }
