@@ -4,7 +4,9 @@
       <img src="/public/client-sign.jpg" alt="Customer Registration Image" class="register-image">
     </div>
     <div class="register-card">
-
+      <div class="login-card-header">
+        <img src="/src/assets/maki-logo-horizontal.svg"alt="MakiLogo"class="maki-logo">
+      </div>
       <div class="p-fluid">
         <label>  <h1>Register as Customer </h1>
           </label>
@@ -103,8 +105,18 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: linear-gradient(to bottom, #aaf193 60%, #ffffff 50%);
+
+}
+.login-card-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
+.maki-logo {
+  width: 125px;
+}
 .register-image-container {
   width: 50%;
   margin-right: 20px;
@@ -127,4 +139,6 @@ export default {
 .p-field {
   margin-bottom: 20px;
 }
+
+
 </style>
