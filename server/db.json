@@ -39,6 +39,16 @@
       "password": "",
       "photo": "",
       "id": 4
+    },
+    {
+      "name": "fcv",
+      "surname": "fdvdf",
+      "phone": "",
+      "address": "",
+      "email": "",
+      "password": "",
+      "photo": "",
+      "id": 5
     }
   ],
   "artisan": [
@@ -53,6 +63,30 @@
       "business_address": "456 Avenue",
       "password": "password123",
       "photo": "https://example.com/artisan1.jpg"
+    },
+    {
+      "name": "",
+      "surname": "tt",
+      "phone": "",
+      "address": "ytyt",
+      "email": "",
+      "businessName": "",
+      "businessAddress": "",
+      "password": "",
+      "photo": "ty",
+      "id": 2
+    },
+    {
+      "name": "",
+      "surname": "",
+      "phone": "fdf",
+      "address": "fd",
+      "email": "",
+      "businessName": "",
+      "businessAddress": "",
+      "password": "",
+      "photo": "",
+      "id": 3
     }
   ],
   "products": [
