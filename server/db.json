@@ -2,13 +2,16 @@
   "customer": [
     {
       "id": 1,
-      "name": "John",
+      "name": "Grecia Hernandez Lara",
       "surname": "Doe",
       "phone": "123456789",
       "address": "123 Street",
       "email": "john@gmail.com",
       "password": "password123",
-      "photo": "https://example.com/image1.jpg"
+      "photo": "https://example.com/image1.jpg",
+      "age": 33,
+      "province": "Ica",
+      "info": "“Soy una estudiante de diseño grafico y me gusta muchas las artesanias peruanas, siento que explora mucho nuestro arte”"
     },
     {
       "id": 2,
@@ -18,7 +21,10 @@
       "address": "Main Avenue",
       "email": "alice@gmail.com",
       "password": "secret456",
-      "photo": "https://example.com/image2.jpg"
+      "photo": "https://example.com/image2.jpg",
+      "age": 33,
+      "province": "Ica",
+      "info": "“Soy una estudiante de diseño grafico y me gusta muchas las artesanias peruanas, siento que explora mucho nuestro arte”"
     },
     {
       "name": "Antonella",
@@ -28,7 +34,10 @@
       "email": "Anto@gmail.com",
       "password": "12345",
       "photo": "ass",
-      "id": 3
+      "id": 3,
+      "age": 33,
+      "province": "Ica",
+      "info": "“Soy una estudiante de diseño grafico y me gusta muchas las artesanias peruanas, siento que explora mucho nuestro arte”"
     }
   ],
   "artisan": [
