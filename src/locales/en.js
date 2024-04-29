@@ -17,7 +17,27 @@ const en ={
     freeShipping: 'Free Shipping to all Peru',
     shippingTime: 'Shipping time in 3 working days',
     freeReturns: 'Free returns',
+    title: 'How would you like to log in?',
+    client: 'Client',
+    artisan: 'Artisan',
+    loginArtisan: 'Log In ',
+    email: 'Email',
+    password: 'Password',
+    login: 'Login',
+   addressing: 'Dont have an account? Register here',
+    loginCustomer: 'Log In',
+    register: 'Register ',
+    name:'name',
+    lastName:'Last Name',
+    phone:'Phone',
+    address:'Address',
+    businessName:'Business Name',
+    businessAddress:'Business Address',
+    create: 'create Account',
+    addressingRegister:'Already have an account? Log in',
+
 
 }
 
 export default en;
+

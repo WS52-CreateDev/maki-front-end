@@ -1,3 +1,4 @@
+
 <template>
   <div class="login-container">
     <div class="login-image-container">
@@ -9,21 +10,21 @@
       </div>
       <div class="p-fluid">
         <label>
-          <h1> Login as Artisan</h1>
+          <h1> {{ $t('loginArtisan') }}</h1>
           </label>
         <div class="p-field">
-          <label for="email">Email</label>
+          <label for="email">{{ $t('email') }}</label>
           <pv-input-text id="email" v-model="email"></pv-input-text>
         </div>
         <div class="p-field">
-          <label for="password">Password</label>
+          <label for="password">{{ $t('password') }}</label>
           <pv-input-text id="password" v-model="password" type="password"></pv-input-text>
         </div>
         <div class="p-d-flex p-jc-center p-mb-3">
-          <pv-button @click="login()">Login</pv-button>
+          <pv-button @click="login()">{{$t('login')}}</pv-button>
         </div>
         <div class="p-d-flex p-jc-center">
-          <router-link to="/register-artisan" class="register-link">Don't have an account? Register here</router-link>
+          <router-link to="/register-artisan" class="register-link">{{$t('addressing')}}</router-link>
         </div>
       </div>
     </div>
@@ -113,4 +114,5 @@ export default {
   margin-top: 10px;
   display: block;
 }
+
 </style>

@@ -49,6 +49,16 @@
       "password": "",
       "photo": "",
       "id": 5
+    },
+    {
+      "name": "",
+      "surname": "",
+      "phone": "",
+      "address": "",
+      "email": "",
+      "password": "",
+      "photo": "",
+      "id": 6
     }
   ],
   "artisan": [

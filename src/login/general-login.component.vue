@@ -2,14 +2,14 @@
   <div class="container">
     <img src="/src/assets/maki-logo-horizontal.svg" alt="Maki Logo" style="width:250px;" aria-hidden="true" />
 
-    <h1>{{ $t('How would you like to log in?')}}</h1>
+    <h1>{{ $t('title') }}</h1>
     <div class="content">
       <div class="image-wrapper">
         <img class="image bordered" src="/public/client-sign.jpg" alt="Left Image" usemap="#clientmap">
         <map name="clientmap">
           <area shape="rect" coords="0,0,200,400" @click="goToLogInCliente" alt="Cliente">
         </map>
-        <button @click="goToLogInCliente" class="rounded-button">{{ $t("Cliente") }}</button>
+        <button @click="goToLogInCliente" class="rounded-button">{{ $t("client") }}</button>
       </div>
       <div class="vertical-line"></div>
       <div class="image-wrapper">
@@ -17,7 +17,7 @@
         <map name="artisanmap">
           <area shape="rect" coords="0,0,200,400" @click="goToLogInArtesano" alt="Artesano">
         </map>
-        <button @click="goToLogInArtesano" class="rounded-button">{{ $t("Artesano") }}</button>
+        <button @click="goToLogInArtesano" class="rounded-button">{{ $t("artisan") }}</button>
       </div>
     </div>
   </div>

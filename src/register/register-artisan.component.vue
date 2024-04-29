@@ -8,54 +8,50 @@
         <img src="/src/assets/maki-logo-horizontal.svg" alt="MakiLogo" class="maki-logo">
       </div>
       <div class="p-fluid">
-        <label> <h1> Register as Artisan</h1> </label>
+        <label> <h1> {{$t('register')}}</h1> </label>
         <div class="row">
           <div class="col-6">
             <div class="p-field">
-              <label for="name">Name</label>
+              <label for="name">{{$t('name')}}</label>
               <pv-input-text id="name" v-model="name"></pv-input-text>
             </div>
             <div class="p-field">
-              <label for="surname">Surname</label>
+              <label for="surname">{{$t('lastName')}}</label>
               <pv-input-text id="surname" v-model="surname"></pv-input-text>
             </div>
             <div class="p-field">
-              <label for="phone">Phone</label>
+              <label for="phone">{{$t('phone')}}</label>
               <pv-input-text id="phone" v-model="phone"></pv-input-text>
             </div>
             <div class="p-field">
-              <label for="address">Address</label>
+              <label for="address">{{$t('address')}}</label>
               <pv-input-text id="address" v-model="address"></pv-input-text>
             </div>
           </div>
           <div class="col-6">
             <div class="p-field">
-              <label for="email">Email</label>
+              <label for="email">{{$t('email')}}</label>
               <pv-input-text id="email" v-model="email"></pv-input-text>
             </div>
             <div class="p-field">
-              <label for="businessName">Business Name</label>
+              <label for="businessName">{{$t('businessName')}}</label>
               <pv-input-text id="businessName" v-model="businessName"></pv-input-text>
             </div>
             <div class="p-field">
-              <label for="businessAddress">Business Address</label>
+              <label for="businessAddress">{{$t('businessAddress')}}</label>
               <pv-input-text id="businessAddress" v-model="businessAddress"></pv-input-text>
             </div>
             <div class="p-field">
-              <label for="password">Password</label>
+              <label for="password">{{$t('password')}}</label>
               <pv-input-text id="password" v-model="password" type="password"></pv-input-text>
             </div>
           </div>
         </div>
-        <div class="p-field">
-          <label for="photo">Photo URL</label>
-          <pv-input-text id="photo" v-model="photo"></pv-input-text>
-        </div>
         <div class="p-d-flex p-jc-center p-mb-3">
-          <pv-button @click="create()">Save</pv-button>
+          <pv-button @click="create()">{{$t('create')}}</pv-button>
         </div>
         <div class="p-d-flex p-jc-center">
-          <router-link to="/login-artisan">Already have an account? Log in</router-link>
+          <router-link to="/login-artisan">{{$t('addressingRegister')}}</router-link>
         </div>
       </div>
     </div>
