@@ -10,7 +10,6 @@ export class DesignApiService {
     async getDesignById(id) {
         return await http.get('products/'+id)
     }
-
     async createDesign(body) {
         return await http.post('design',body)
     }

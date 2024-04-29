@@ -1,56 +1,55 @@
-
 <template>
-
   <div class="container">
+    <img src="/src/assets/maki-logo-horizontal.svg" alt="Maki Logo" style="width:250px;" aria-hidden="true" />
+
     <h1>{{ $t('How would you like to log in?')}}</h1>
     <div class="content">
       <div class="image-wrapper">
-        <img class="image bordered" src="/public/client-sign.jpg" alt="Left Image">
+        <img class="image bordered" src="/public/client-sign.jpg" alt="Left Image" usemap="#clientmap">
+        <map name="clientmap">
+          <area shape="rect" coords="0,0,200,400" @click="goToLogInCliente" alt="Cliente">
+        </map>
         <button @click="goToLogInCliente" class="rounded-button">{{ $t("Cliente") }}</button>
       </div>
       <div class="vertical-line"></div>
       <div class="image-wrapper">
-        <img class="image bordered" src="/public/artesano-sign.jpg" alt="Right Image">
+        <img class="image bordered" src="/public/artesano-sign.jpg" alt="Right Image" usemap="#artisanmap">
+        <map name="artisanmap">
+          <area shape="rect" coords="0,0,200,400" @click="goToLogInArtesano" alt="Artesano">
+        </map>
         <button @click="goToLogInArtesano" class="rounded-button">{{ $t("Artesano") }}</button>
       </div>
     </div>
   </div>
-
-
 </template>
 
 <script>
 export default {
-  name: "login",
-
+  name: "general-login",
   methods: {
     goToLogInCliente() {
       this.$router.push('/login-customer');
     },
-
     goToLogInArtesano() {
       this.$router.push('/login-artisan');
     }
   }
 }
-
-
-
 </script>
-
-
 
 <style scoped>
 .container {
   text-align: center;
   width: 100%;
   padding-top: 80px;
+  background: linear-gradient(to bottom, #aaf193 60%, #ffffff 50%);
 }
 
 h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 32px;
-  margin: 0 0 50px;
+  margin: 0 0 30px;
+  font-weight: bold;
 }
 
 .content {
@@ -66,8 +65,9 @@ h1 {
 }
 
 .image {
-  width: 400px;
+  width: 100%;
   height: auto;
+  max-width: 400px;
 }
 
 .bordered {
@@ -78,7 +78,7 @@ h1 {
   margin-top: 20px;
   padding: 10px 20px;
   border: none;
-  background-color: #e33daf;
+  background-color: #b469e4;
   color: white;
   font-size: 16px;
   border-radius: 25px;
@@ -99,7 +99,7 @@ h1 {
 
 @media (max-width: 768px) {
   .image {
-    display: none;
+    max-width: 100%;
   }
 
   .content {
@@ -119,5 +119,7 @@ h1 {
   .vertical-line {
     display: none;
   }
+
+
 }
 </style>
