@@ -29,6 +29,26 @@
       "password": "12345",
       "photo": "ass",
       "id": 3
+    },
+    {
+      "name": "",
+      "surname": "",
+      "phone": "",
+      "address": "",
+      "email": "",
+      "password": "",
+      "photo": "",
+      "id": 4
+    },
+    {
+      "name": "fcv",
+      "surname": "fdvdf",
+      "phone": "",
+      "address": "",
+      "email": "",
+      "password": "",
+      "photo": "",
+      "id": 5
     }
   ],
   "artisan": [
@@ -43,6 +63,168 @@
       "business_address": "456 Avenue",
       "password": "password123",
       "photo": "https://example.com/artisan1.jpg"
+    },
+    {
+      "name": "",
+      "surname": "tt",
+      "phone": "",
+      "address": "ytyt",
+      "email": "",
+      "businessName": "",
+      "businessAddress": "",
+      "password": "",
+      "photo": "ty",
+      "id": 2
+    },
+    {
+      "name": "",
+      "surname": "",
+      "phone": "fdf",
+      "address": "fd",
+      "email": "",
+      "businessName": "",
+      "businessAddress": "",
+      "password": "",
+      "photo": "",
+      "id": 3
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Chullo Peruano",
+      "publication_date": "2022-03-15",
+      "price": 50,
+      "image": "https://d15yqn4xt8exgp.cloudfront.net/media/products/BON000338/inka-products-bonnet-chullo-peruvien-alpaga-tisse-main-en-alpaga-avec-motifs-ethniques-1-20211128095320.zoom.jpeg",
+      "description": "Un hermoso chullo peruano tejido a mano con lana de alpaca, característico de la región de los Andes. Cada chullo es único y refleja la rica tradición de la artesanía peruana.",
+      "width": "20 cm",
+      "height": "25 cm",
+      "depth": "20 cm",
+      "artisan": 1,
+      "category": 1,
+      "material": "Lana de Alpaca"
+    },
+    {
+      "id": 2,
+      "name": "Mate de Calabaza",
+      "publication_date": "2022-04-02",
+      "price": 35,
+      "image": "https://live.staticflickr.com/2493/3852730039_cddecb38bc_c.jpg",
+      "description": "El mate de calabaza es una bebida tradicional peruana. Está hecho de una calabaza seca que se utiliza como recipiente para beber té de hierbas o mate. Es una parte importante de la cultura y la vida diaria en Perú.",
+      "width": "10 cm",
+      "height": "15 cm",
+      "depth": "10 cm",
+      "artisan": 1,
+      "category": 4,
+      "material": "Calabaza"
+    },
+    {
+      "id": 3,
+      "name": "Pulsera de Macramé",
+      "publication_date": "2022-04-10",
+      "price": 20,
+      "image": "https://images1.novica.net/pictures/4/p422637_2_400.jpg",
+      "description": "Una hermosa pulsera de macramé hecha a mano por artesanos peruanos. El macramé es una técnica de tejido que se utiliza para crear intrincados diseños utilizando nudos. Esta pulsera es un ejemplo impresionante de la artesanía peruana.",
+      "width": "5 cm",
+      "height": "5 cm",
+      "depth": "1 cm",
+      "artisan": 1,
+      "category": 2,
+      "material": "Hilo de Algodón"
+    },
+    {
+      "id": 4,
+      "name": "Collar de Turquesa",
+      "publication_date": "2023-02-15",
+      "price": 35,
+      "image": "https://scontent.flim38-1.fna.fbcdn.net/v/t1.6435-9/143075536_223470802776087_3957099174547953207_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEgqcHVVGBHodwLgcJKbZmfyeA51MDJcc7J4DnUwMlxzjmagcITI5f08a7dh06COdjFL9NPd8mGFHQQf_52IIce&_nc_ohc=m0Sr9VEM9qQAb4udGz2&_nc_ht=scontent.flim38-1.fna&oh=00_AfAuNnpMs0HphxQm7jNJl45Upw7GrGS79-kI2KLjG1OfVg&oe=664F8D39",
+      "description": "Este exquisito collar está hecho a mano con cuentas de turquesa natural y detalles de plata. La turquesa es conocida por sus propiedades curativas y su hermoso color azul verdoso, que añade un toque de elegancia a cualquier conjunto.",
+      "width": "2 cm",
+      "height": "45 cm",
+      "artisan": 1,
+      "category": 2,
+      "material": "Turquesa, Plata"
+    },
+    {
+      "id": 5,
+      "name": "Bolso de Cuero Teñido",
+      "publication_date": "2023-06-20",
+      "price": 60,
+      "image": "https://images1.novica.net/pictures/4/p304112_2.jpg",
+      "description": "Este bolso artesanal está confeccionado con cuero teñido a mano, lo que le confiere un aspecto único y un acabado suave. Perfecto para llevar tus artículos esenciales con estilo, este bolso es ideal para el uso diario o para ocasiones especiales.",
+      "width": "30 cm",
+      "height": "25 cm",
+      "depth": "10 cm",
+      "artisan": 1,
+      "category": 3,
+      "material": "Cuero"
+    },
+    {
+      "id": 6,
+      "name": "Bowl pintado a mano",
+      "publication_date": "2023-08-05",
+      "price": 50,
+      "image": "https://tienda.figurasperuanas.com/wp/wp-content/uploads/2023/01/Artesania-2.jpg",
+      "description": "Este hermoso bowl está pintado a mano por artesanos peruanos. Cada pieza es única y presenta un diseño tradicional inspirado en la rica cultura peruana. Perfecto para servir aperitivos o decorar tu hogar con un toque de arte.",
+      "width": "2 cm",
+      "height": "4 cm",
+      "artisan": 1,
+      "category": 4,
+      "material": "Cerámica"
+    },
+    {
+      "id": 7,
+      "name": "Chullo Andino",
+      "publication_date": "2023-10-12",
+      "price": 40,
+      "image": "https://lh3.googleusercontent.com/proxy/FHT8X87CmaZknG7vt_P0SylE5FxTZqvIft6OeE6KnGy3xX0fmAymGWTSGifXACwNw1DJ24tigr80N-S07fQfn2SOveu2OYd0QwrynT6Y",
+      "description": "El chullo andino es un gorro tradicional peruano con orejeras que protegen del frío. Está hecho a mano por artesanos locales utilizando lana de alpaca, una fibra suave y cálida. Este chullo no solo es funcional sino también un símbolo de la cultura andina.",
+      "width": "20 cm",
+      "height": "25 cm",
+      "depth": "15 cm",
+      "artisan": 1,
+      "category": 1,
+      "material": "Lana de Alpaca"
+    },
+    {
+      "id": 8,
+      "name": "Cerámica Chulucanas",
+      "publication_date": "2023-12-05",
+      "price": 55,
+      "image": "https://scontent.flim38-1.fna.fbcdn.net/v/t39.30808-6/425013512_780188904136538_5383719903183681508_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFfTtREvMvggp1XTg8COlh72AzOW143JHLYDM5bXjckcm_u_7doBPMqzFbb1Ote5mqKVacfTc2y7I1_-xYiUtdD&_nc_ohc=A_3uQQ1sO-AAb6J0rZ6&_nc_ht=scontent.flim38-1.fna&oh=00_AfAW3wL5Ri35gjbrE0cYnp2i7ZJeF9dTMlEi-Uo5q-lJdQ&oe=662DF5A0",
+      "description": "La cerámica Chulucanas es una forma de arte popular originaria de la región de Chulucanas en Perú. Está hecha a mano por expertos alfareros utilizando técnicas tradicionales. La cerámica Chulucanas se caracteriza por sus diseños geométricos y sus colores vibrantes.",
+      "width": "30 cm",
+      "height": "20 cm",
+      "depth": "20 cm",
+      "artisan": 1,
+      "category": 4,
+      "material": "Arcilla"
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Ropa"
+    },
+    {
+      "id": 2,
+      "name": "Joyas"
+    },
+    {
+      "id": 3,
+      "name": "Accesorios"
+    },
+    {
+      "id": 4,
+      "name": "Decoración"
+    },
+    {
+      "id": 5,
+      "name": "Juguetes"
+    },
+    {
+      "id": 6,
+      "name": "Otros"
     }
   ]
 }
