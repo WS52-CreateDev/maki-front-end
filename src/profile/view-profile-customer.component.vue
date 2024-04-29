@@ -1,5 +1,6 @@
 <script setup>
 import TheToolbar from "/public/the-toolbar.component.vue";
+
 </script>
 <template>
   <the-toolbar/>
@@ -67,7 +68,7 @@ export default {
       artisans: [],
       products: [],
       ProductsApiService: new ProductsApiService(),
-      CustomerApiService: new CustomerApiService()
+      CustomerApiService: new CustomerApiService(),
     }
   },
   mounted() {
@@ -84,7 +85,8 @@ export default {
   },
   methods: {
     async refresh() {
-        const responseCustomers = await this.CustomerApiService.getById(1);
+        const userId = this.$route.query.userId;
+        const responseCustomers = await this.CustomerApiService.getById(userId);
         this.customer = responseCustomers.data;
         const responseProducts = await this.ProductsApiService.getProducts();
         this.products = responseProducts.data;

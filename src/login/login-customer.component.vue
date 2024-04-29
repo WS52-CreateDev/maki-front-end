@@ -53,15 +53,17 @@ export default {
       );
 
       if (response.data.length > 0) {
-        alert("Login successful.");
-        router.push("/home-customer");
+        const userId = response.data[0].id;
+        alert("Login successful");
+        router.push({ path: '/profile-customer', query: { userId: userId } });
         this.$store.commit("SET_CUSTOMER", response.data[0]);
       } else {
-        alert("Invalid email or password.");
+        alert("Invalid email or password." + response.data.length);
       }
-    },
-  },
+    }
+  }
 };
+
 </script>
 
 <style scoped>
