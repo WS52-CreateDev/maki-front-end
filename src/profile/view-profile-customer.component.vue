@@ -32,16 +32,31 @@ import TheToolbar from "/public/the-toolbar.component.vue";
     </div>
   </div>
 
-  
+  <div class="Prodcuts-card-container">
 
+    <div class="featured-container">
+      <h1>Productos </h1>
+    </div>
 
-
-
+   <div class = "card">
+      <PvCard class ="product-pv-card" v-for="product in productWithArtisanName" :key="product.id">
+        <template #header>
+          <RouterLink :to="{ path: '/products/' + product.id }" @click="refresh(product.id)"><img :src="product.image" alt="Product Image" style="display: block; margin: 2rem auto 0; border-radius: 20px; width:150px; height:150px;"/></RouterLink>
+        </template>
+        <template #content>
+          <RouterLink :to="{ path: '/products/' + product.id }"><p style="font-weight: bold;">{{ product.name }}</p></RouterLink>
+          <p>hecho por</p><RouterLink to="/" style="color: #238ACF;">{{ product.artisanName }}</RouterLink>
+          <p style="font-weight: bold; text-align: right;">s/. {{ product.price }}</p>
+        </template>
+      </PvCard>
+    </div>
+  </div>
 
 </template>
 
 <script>
 import {CustomerApiService} from "../services/customer-api.service..js";
+import {ProductsApiService } from "../services/products-api.service.js";
 
 export default {
   name: 'customer-profile',
@@ -49,23 +64,36 @@ export default {
     return {
       value: '',
       customer: [],
+      artisans: [],
+      products: [],
+      ProductsApiService: new ProductsApiService(),
       CustomerApiService: new CustomerApiService()
     }
   },
   mounted() {
     this.refresh()
   },
+  computed: {
+    productWithArtisanName() {
+      return this.products.map(product => {
+        const artisan = this.artisans.find(artisan => artisan.id === product.artisan);
+        const artisanName = artisan ? `${artisan.name} ${artisan.surname}` : '';
+        return { ...product, artisanName };
+      });
+    }
+  },
   methods: {
     async refresh() {
-      try {
         const responseCustomers = await this.CustomerApiService.getById(1);
         this.customer = responseCustomers.data;
-      } catch (error) {
-        console.log(error)
-      }
-    }
+        const responseProducts = await this.ProductsApiService.getProducts();
+        this.products = responseProducts.data;
+        const responseArtisans = await this.ProductsApiService.getArtisans();
+        this.artisans = responseArtisans.data;
+    } 
   }
 }
+
 
 
 </script>
@@ -139,6 +167,25 @@ export default {
   padding: 10px 15px;
   cursor: pointer;
   margin-bottom: px;
+}
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+.product-pv-card{
+  width: 20rem;
+  height: 22rem;
+  border-radius: 1rem;
+  border-top: 4px solid #67823A;
+  border-bottom: 4px solid #B7A9E0;
 }
 
 </style>
