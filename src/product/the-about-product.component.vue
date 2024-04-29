@@ -25,39 +25,41 @@ const value = ref(4);
     </div>
 
     <div class ="product-info">
-      <p style="font-weight: bold; font-size: 2.3rem;">{{ product.name }}</p>
-      <p style="display: inline;">hecho por </p><RouterLink to="/" style="color: #238ACF;">{{ productWithArtisanName.artisanName }}</RouterLink>
+      <p style="font-weight: bold; font-size: 2.3rem;">{{ product.name }} / </p>
+      <p style="font-weight: bold; font-size: 2rem;">{{ product.name_en }}</p>
+      <p style="display: inline;">{{$t('madeBy')}}:  </p><RouterLink to="/" style="color: #238ACF;">{{ productWithArtisanName.artisanName }}</RouterLink>
       <br><br>
-      <p>Hecho a mano</p>
-      <p style="font-weight: bold; display: inline;">Materiales: </p>
+      <p>{{$t('handcrafted')}}</p>
+      <p style="font-weight: bold; display: inline;">{{$t('materials')}}: </p>
       <p style="display: inline;"> {{ product.material }}</p>
       <br>
-      <p style="font-weight: bold; display: inline;">Ancho: </p>
+      <p style="font-weight: bold; display: inline;">{{$t('width')}}: </p>
       <p style="display: inline;"> {{product.width}}</p>
       <br>
-      <p style="font-weight: bold; display: inline;">Alto: </p>
+      <p style="font-weight: bold; display: inline;">{{$t('height')}}: </p>
       <p style="display: inline;"> {{product.height}}</p>
       <br>
-      <p style="font-weight: bold; display: inline;">Fondo: </p>
+      <p style="font-weight: bold; display: inline;">{{$t('depth')}}: </p>
       <p style="display: inline;"> {{product.depth}}</p>
       <br><br>
-      <p>{{product.description}}</p>
+      <p>{{product.description}}</p> <br>
+      <p>{{product.description_en}}</p>
     </div>
     <div class ="shipping-info">
-      <p style="font-weight: bold;">Información de envío:</p>
-      <p>Envío gratis a todo el Perú</p>
-      <p>Entrega en 3 días hábiles</p>
-      <p>Devoluciones gratuitas</p>
+      <p style="font-weight: bold;">{{$t('shippingInfo')}}</p>
+      <p>{{$t('freeShipping')}}</p>
+      <p>{{$t('shippingTime')}}</p>
+      <p>{{$t('freeReturns')}}</p>
 
       <div class ="price">
-        <p style="font-weight: bold; display: inline;">Precio: </p>
+        <p style="font-weight: bold; display: inline;">{{$t('price')}}: </p>
         <p style="font-weight: bold; display: inline; font-size: 2rem; color: #67823A">s/. {{ product.price }}</p>
       </div>
 
       <div class ="shopping-buttons">
-        <pv-button class = "add-to-cart">Agregar al carrito</pv-button>
+        <pv-button class = "add-to-cart">{{$t('addToCart')}}</pv-button>
         <br>
-        <pv-button class = "buy-now">Comprar ahora</pv-button>
+        <pv-button class = "buy-now">{{$t('buyNow')}}</pv-button>
       </div>
     </div>
 
@@ -114,10 +116,10 @@ export default {
   margin-right: 1rem;
 }
 .card-container{
-  margin-top: 1rem;
   display: flex;
   align-items: center;
   margin-left: 5rem;
+  margin-bottom: 5rem;
 }
 .product-pv-card{
   height: 26rem;

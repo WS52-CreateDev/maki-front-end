@@ -17,8 +17,8 @@ const categories = ref([
 
   <TheToolbar/>
   <div class = "button-container">
-    <RouterLink to="/"><pv-button class="btn-back" icon="pi pi-arrow-left" rounded aria-label="Filter" /></RouterLink>
-    <RouterLink to="/"><p style="font-weight: bold; font-size: 1.5rem;">Volver</p></RouterLink>
+    <RouterLink to="/products"><pv-button class="btn-back" icon="pi pi-arrow-left" rounded aria-label="Filter" /></RouterLink>
+    <RouterLink to="/products"><p style="font-weight: bold; font-size: 1.5rem;">Volver</p></RouterLink>
   </div>
 
   <div class="product-card">
@@ -30,7 +30,10 @@ const categories = ref([
 
       <div class ="product-image">
         <img src="/src/assets/images/placeholder-image.jpg" alt="Upload Image" style="display: block; width:15rem; height:15rem;"/>
+        <label for="name">URL de la imagen</label> <br>
+        <pv-input-text id="image" v-model="image" aria-describedby="image-help" />
       </div>
+
 
       <div class="product-info">
         <div class="product-name">
@@ -101,6 +104,7 @@ export default {
       material: '',
       artisan: '',
       category: '',
+      image: '',
       productsApiService : new ProductsApiService()
     }
   },
@@ -114,7 +118,8 @@ export default {
         height: this.height,
         depth: this.depth,
         material: this.material,
-        category: this.category
+        category: this.category,
+        image: this.image
       }
 
       const response = await this.productsApiService.createProduct(body)
@@ -139,6 +144,7 @@ export default {
       this.depth = '';
       this.material = '';
       this.category = '';
+      this.image = '';
     }
   }
 }
@@ -168,7 +174,7 @@ export default {
 .product-image{
   margin-right: 10rem;
   padding: 3.5rem;
-  border-radius: 20rem;
+  border-radius: 2rem;
   border: 5px solid #BF9BDE;
 }
 .product-info{

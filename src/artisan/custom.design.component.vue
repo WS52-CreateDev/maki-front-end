@@ -1,9 +1,15 @@
-
+<script setup>
+import TheToolbar from "/public/the-toolbar.component.vue";
+</script>
 
 <template>
+  <TheToolbar/>
+  <div class = "button-container">
+    <RouterLink to="/products"><pv-button class="btn-back" icon="pi pi-arrow-left" rounded aria-label="Filter" /></RouterLink>
+    <RouterLink to="/products"><p style="font-weight: bold; font-size: 1.5rem;">Volver</p></RouterLink>
+  </div>
 
 <div class="design-request-form">
-    
 
     <div class="card-content">
       <div class="header">
@@ -91,10 +97,16 @@ export default {
   color: rgb(29, 29, 29);
   font-size: 14px;
   font-weight: bold;
-
 }
-
-
+.button-container{
+  margin-left:5rem;
+  display: flex;
+}
+.btn-back{
+  background-color: #67823A;
+  border-color: #67823A;
+  margin-right: 1rem;
+}
 .design-request-form {
   max-width: 600px;
   margin: 0 auto;

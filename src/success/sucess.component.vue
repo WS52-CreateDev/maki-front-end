@@ -1,9 +1,10 @@
-
+<script setup>
+import TheToolbar from "/public/the-toolbar.component.vue";
+</script>
 
 <template>
-
+  <TheToolbar/>
     <div class="design-request-form">
-        
     
         <div class="card-content">
           <div class="header">

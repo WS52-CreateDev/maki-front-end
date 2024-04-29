@@ -6,18 +6,20 @@ import TheToolbar from "/public/the-toolbar.component.vue";
 
   <TheToolbar/>
   <div class="featured-container">
-    <h1>Productos Destacados</h1>
+    <h1>{{ $t('featuredTitle') }}</h1>
   </div>
 
   <div class="card-container">
     <div class = "card">
       <pv-card class ="product-pv-card" v-for="product in productWithArtisanName" :key="product.id">
         <template #header>
-          <RouterLink :to="{ path: '/products/' + product.id }" @click="refresh(product.id)"><img :src="product.image" alt="Product Image" style="display: block; margin: 2rem auto 0; border-radius: 20px; width:150px; height:150px;"/></RouterLink>
+          <RouterLink :to="{ path: '/products/' + product.id }" @click="refresh(product.id)">
+            <img :src="product.image" alt="Product Image" style="display: block; margin: 2rem auto 0; border-radius: 20px; width:150px; height:150px;"/>
+          </RouterLink>
         </template>
         <template #content>
-          <RouterLink :to="{ path: '/products/' + product.id }"><p style="font-weight: bold;">{{ product.name }}</p></RouterLink>
-          <p>hecho por</p><RouterLink to="/" style="color: #238ACF;">{{ product.artisanName }}</RouterLink>
+          <RouterLink :to="{ path: '/products/' + product.id }"><p style="font-weight: bold;">{{ product.name }} / {{product.name_en}}</p></RouterLink>
+          <p>{{ $t('madeBy') }}</p><RouterLink to="/" style="color: #238ACF;">{{ product.artisanName }}</RouterLink>
           <p style="font-weight: bold; text-align: right;">s/. {{ product.price }}</p>
         </template>
       </pv-card>
@@ -25,7 +27,7 @@ import TheToolbar from "/public/the-toolbar.component.vue";
   </div>
 
   <div class="artisans-container">
-    <h1>Nuestros Artesanos</h1>
+    <h1>{{ $t('artisansTitle') }}</h1>
   </div>
 
   <div class="card-container">
@@ -102,7 +104,7 @@ export default {
 }
 .product-pv-card{
   width: 20rem;
-  height: 22rem;
+  height: 23rem;
   border-radius: 1rem;
   border-top: 4px solid #67823A;
   border-bottom: 4px solid #B7A9E0;

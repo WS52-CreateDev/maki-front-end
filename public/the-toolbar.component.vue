@@ -18,6 +18,12 @@
 
       <template #end>
         <div class="flex align-items-center gap-2">
+          <pv-button class="language-btn-en" @click.prevent="toggleLanguage('en')">
+            <img src="/src/assets/images/en-flag.png" alt="EN Flag" style="width: 1.5rem; height: 1rem;" aria-hidden="true"/>
+          </pv-button>
+          <pv-button class="language-btn-es" @click.prevent="toggleLanguage('es')">
+            <img src="/src/assets/images/es-flag.png" alt="ES Flag" style="width: 1.5rem; height: 1rem;" aria-hidden="true"/>
+          </pv-button>
           <RouterLink to="/">
             <i class="pi pi-shopping-cart" style="font-size: 2rem; padding-right: 1.5rem;" aria-hidden="true"></i>
           </RouterLink>
@@ -27,7 +33,7 @@
               <pv-menu :model="items"/>
             </div>
           </div>
-          <RouterLink to="/" class="my-profile" aria-hidden="true">Mi Perfil</RouterLink>
+          <RouterLink to="/" class="my-profile" aria-hidden="true">{{ $t('myProfile') }}</RouterLink>
         </div>
       </template>
 
@@ -55,6 +61,15 @@ export default {
       items,
       toggleMenu,
     };
+  },
+  methods: {
+    toggleLanguage(lang) {
+      if (lang === 'en') {
+        this.$i18n.locale = 'en';
+      } else {
+        this.$i18n.locale = 'es';
+      }
+    }
   }
 };
 </script>
@@ -62,6 +77,12 @@ export default {
 <style scoped>
 .search-bar{
   width: 40rem;
+}
+.language-btn-en, .language-btn-es{
+  background-color: #fff;
+  border: none;
+  padding: 0;
+  margin: 0 15px;
 }
 .my-profile{
   font-size: 1.5rem;

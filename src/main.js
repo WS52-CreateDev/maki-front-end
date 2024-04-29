@@ -34,6 +34,8 @@ import Message from 'primevue/message';
 import ButtonGroup from 'primevue/buttongroup';
 import IconField from "primevue/iconfield";
 import InputIcon from "primevue/inputicon";
+import Textarea from 'primevue/textarea';
+import Dropdown from 'primevue/dropdown';
 
 createApp(App)
     .use(router)
@@ -60,4 +62,6 @@ createApp(App)
     .component('PvButtonGroup', ButtonGroup)
     .component('PvIconField', IconField)
     .component('PvInputIcon', InputIcon)
+    .component('PvTextarea', Textarea)
+    .component('PvDropdown', Dropdown)
     .mount('#app');

@@ -1,6 +1,6 @@
 
 import {createRouter, createWebHistory} from "vue-router";
-import loginComponent from "./login/login.component.vue";
+
 import loginCustomerComponent from "./login/login-customer.component.vue";
 import registerCustomerComponent from "./register/register-customer.component.vue";
 import loginArtisanComponent from "./login/login-artisan.component.vue";
@@ -11,7 +11,8 @@ import sucessComponent from "./success/sucess.component.vue";
 import customDesignComponent from "./artisan/custom.design.component.vue";
 
 import ListProductsComponent from "/src/product/list-products.component.vue";
-
+import ProductDetailsComponent from "/src/product/the-about-product.component.vue";
+import PostProductComponent from "./product/post-product.component.vue";
 
 const router=createRouter({
 
@@ -24,7 +25,9 @@ const router=createRouter({
         {path:'/register-artisan', component:registerArtisanComponent},
         {path:'/custom-design',component:customDesignComponent},
         {path:'/sucess', component:sucessComponent},
-        {path: '/products', component: ListProductsComponent }
+        {path: '/products', component: ListProductsComponent },
+        {path: '/products/:id', component: ProductDetailsComponent},
+        {path: '/upload', component: PostProductComponent},
     ]
 
 })
