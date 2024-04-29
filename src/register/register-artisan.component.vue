@@ -4,40 +4,48 @@
       <img src="/public/artesano-sign.jpg" alt="Artisan Registration Image" class="register-image">
     </div>
     <div class="register-card">
+      <div class="login-card-header">
+        <img src="/src/assets/maki-logo-horizontal.svg" alt="MakiLogo" class="maki-logo">
+      </div>
       <div class="p-fluid">
-        <label> <h1>  Register as Artisan</h1>
-         </label>
-        <div class="p-field">
-          <label for="name">Name</label>
-          <pv-input-text id="name" v-model="name"></pv-input-text>
-        </div>
-        <div class="p-field">
-          <label for="surname">Surname</label>
-          <pv-input-text id="surname" v-model="surname"></pv-input-text>
-        </div>
-        <div class="p-field">
-          <label for="phone">Phone</label>
-          <pv-input-text id="phone" v-model="phone"></pv-input-text>
-        </div>
-        <div class="p-field">
-          <label for="address">Address</label>
-          <pv-input-text id="address" v-model="address"></pv-input-text>
-        </div>
-        <div class="p-field">
-          <label for="email">Email</label>
-          <pv-input-text id="email" v-model="email"></pv-input-text>
-        </div>
-        <div class="p-field">
-          <label for="businessName">Business Name</label>
-          <pv-input-text id="businessName" v-model="businessName"></pv-input-text>
-        </div>
-        <div class="p-field">
-          <label for="businessAddress">Business Address</label>
-          <pv-input-text id="businessAddress" v-model="businessAddress"></pv-input-text>
-        </div>
-        <div class="p-field">
-          <label for="password">Password</label>
-          <pv-input-text id="password" v-model="password" type="password"></pv-input-text>
+        <label> <h1> Register as Artisan</h1> </label>
+        <div class="row">
+          <div class="col-6">
+            <div class="p-field">
+              <label for="name">Name</label>
+              <pv-input-text id="name" v-model="name"></pv-input-text>
+            </div>
+            <div class="p-field">
+              <label for="surname">Surname</label>
+              <pv-input-text id="surname" v-model="surname"></pv-input-text>
+            </div>
+            <div class="p-field">
+              <label for="phone">Phone</label>
+              <pv-input-text id="phone" v-model="phone"></pv-input-text>
+            </div>
+            <div class="p-field">
+              <label for="address">Address</label>
+              <pv-input-text id="address" v-model="address"></pv-input-text>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="p-field">
+              <label for="email">Email</label>
+              <pv-input-text id="email" v-model="email"></pv-input-text>
+            </div>
+            <div class="p-field">
+              <label for="businessName">Business Name</label>
+              <pv-input-text id="businessName" v-model="businessName"></pv-input-text>
+            </div>
+            <div class="p-field">
+              <label for="businessAddress">Business Address</label>
+              <pv-input-text id="businessAddress" v-model="businessAddress"></pv-input-text>
+            </div>
+            <div class="p-field">
+              <label for="password">Password</label>
+              <pv-input-text id="password" v-model="password" type="password"></pv-input-text>
+            </div>
+          </div>
         </div>
         <div class="p-field">
           <label for="photo">Photo URL</label>
@@ -55,7 +63,7 @@
 </template>
 
 <script>
-import router from "../router.js";
+
 import { ArtisanApiService } from "../services/artisan-api.service.js";
 
 export default {
@@ -116,9 +124,33 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: linear-gradient(to bottom, #aaf193 60%, #ffffff 50%);
 
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 10px;
+}
+
+.p-field {
+  margin-bottom: 20px;
+}
+.maki-logo {
+  width: 125px;
+}
+.login-card-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 .register-image-container {
   width: 50%;
   margin-right: 20px;
