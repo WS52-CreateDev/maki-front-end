@@ -9,6 +9,10 @@ export class ArtisanApiService {
         return await http.get('artisan');
     }
 
+    async getById(id) {
+        return await http.get('artisan/' + id);
+    }
+
 
     async create(body) {
         return await http.post('artisan', body);

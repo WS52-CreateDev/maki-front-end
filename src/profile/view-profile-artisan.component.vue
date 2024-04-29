@@ -8,27 +8,27 @@ import TheToolbar from "/public/the-toolbar.component.vue";
       <PvButton label="<" class="btn btn-goback"></PvButton>
     </div>
     <div class="header2">
-      <h1>{{ customer.name }}</h1>
+      <h1>{{ artisan.name }}</h1>
     </div>
   </div>
 
-  <div class="customer-profile-container">
-    <div class="customer-image-container">
-      <img :src="customer.photo" :alt="customer.name" />
+  <div class="artisans-profile-container">
+    <div class="artisans-image-container">
+      <img :src="artisan.photo" :alt="artisan.name" />
     </div>
 
-    <div class="customer-info-container">
+    <div class="artisans-info-container">
       <div>
-        <h2> {{ customer.email}}</h2>
-        <h2> Provincia: {{customer.province}}</h2>
-        <h2> Edad: {{customer.age}} años</h2>
-        <h2> Sobre mi: {{customer.info}}</h2>
+        <h3> {{ artisan.email}}</h3>
+        <h3> Provincia: {{artisan.province}}</h3>
+        <h3> Edad: {{artisan.age}} años</h3>
+        <h3> Sobre mi: {{artisan.info}}</h3>
         <Pv-Rating v-model="value" :cancel="false" />
       </div>
     </div>
 
     <div class="design-buttons">
-      <ul><PvButton label="Editar Informacion" class="btn btn-edit"></PvButton></ul>
+      <ul><PvButton label="Solicitar Diseño" class="btn btn-edit"></PvButton></ul>
     </div>
   </div>
 
@@ -38,7 +38,7 @@ import TheToolbar from "/public/the-toolbar.component.vue";
       <h1>Productos </h1>
     </div>
 
-   <div class = "card">
+    <div class = "card">
       <PvCard class ="product-pv-card" v-for="product in productWithArtisanName" :key="product.id">
         <template #header>
           <RouterLink :to="{ path: '/products/' + product.id }" @click="refresh(product.id)"><img :src="product.image" alt="Product Image" style="display: block; margin: 2rem auto 0; border-radius: 20px; width:150px; height:150px;"/></RouterLink>
@@ -55,19 +55,19 @@ import TheToolbar from "/public/the-toolbar.component.vue";
 </template>
 
 <script>
-import {CustomerApiService} from "../services/customer-api.service..js";
+import {ArtisanApiService} from "../services/artisan-api.service.js";
 import {ProductsApiService } from "../services/products-api.service.js";
 
 export default {
-  name: 'customer-profile',
+  name: 'artisans-profile',
   data() {
     return {
       value: '',
-      customer: [],
       artisans: [],
+      artisan:[],
       products: [],
       ProductsApiService: new ProductsApiService(),
-      CustomerApiService: new CustomerApiService()
+      ArtisansApiService: new ArtisanApiService()
     }
   },
   mounted() {
@@ -84,13 +84,13 @@ export default {
   },
   methods: {
     async refresh() {
-        const responseCustomers = await this.CustomerApiService.getById(1);
-        this.customer = responseCustomers.data;
-        const responseProducts = await this.ProductsApiService.getProducts();
-        this.products = responseProducts.data;
-        const responseArtisans = await this.ProductsApiService.getArtisans();
-        this.artisans = responseArtisans.data;
-    } 
+      const responseProducts = await this.ProductsApiService.getProducts();
+      this.products = responseProducts.data;
+      const responseArtisans = await this.ProductsApiService.getArtisans();
+      this.artisans = responseArtisans.data;
+      const reponseArtisan = await  this.ArtisansApiService.getById(1);
+      this.artisan = reponseArtisan.data;
+    }
   }
 }
 
@@ -118,7 +118,7 @@ export default {
   display: flex;
 }
 
-.customer-profile-container {
+.artisans-profile-container {
   display: flex;
   justify-content: flex-start;
   padding: 20px;
@@ -126,7 +126,7 @@ export default {
   margin-left: 250px;
 }
 
-.customer-image-container {
+.artisans-image-container {
   width: 300px;
   height: 300px;
   overflow: hidden;
@@ -136,13 +136,13 @@ export default {
 
 }
 
-.customer-image-container img {
+.artisans-image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.customer-info-container {
+.artisans-info-container {
   display: flex;
   font-size: 20px;
   margin-bottom: 10px;
@@ -156,25 +156,16 @@ export default {
   display: grid;
   align-items: center;
   align-content: space-around;
-  align-content: space-evenly;
 }
 
 .btn {
-  background-color: #67823A;
+  background-color: #6a3a82;
   color: white;
   border: none;
-
   padding: 10px 15px;
   cursor: pointer;
-  margin-bottom: px;
 }
 
-.card-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 .card {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
