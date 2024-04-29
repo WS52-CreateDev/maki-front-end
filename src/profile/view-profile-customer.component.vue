@@ -4,15 +4,19 @@ import TheToolbar from "/public/the-toolbar.component.vue";
 </script>
 <template>
   <the-toolbar/>
-  <div class="header">
-    <div>
-      <PvButton label="<" class="btn btn-goback"></PvButton>
-    </div>
-    <div class="header2">
-      <h1>{{ customer.name }}</h1>
-    </div>
+<div>
+  <div>
+    <RouterLink to="/"> <PvButton label="<" class="btn btn-goback"></PvButton></RouterLink>
+  </div>
+  <div class="header2">
+    <h1  style="font-weight: bold; font-size: 1.5rem; text-align:center; font-size: 34px;">{{ customer.name }}</h1>
   </div>
 
+  <div>
+
+  </div>
+
+</div>
   <div class="customer-profile-container">
     <div class="customer-image-container">
       <img :src="customer.photo" :alt="customer.name" />
@@ -29,7 +33,7 @@ import TheToolbar from "/public/the-toolbar.component.vue";
     </div>
 
     <div class="design-buttons">
-      <ul><PvButton label="Editar Informacion" class="btn btn-edit"></PvButton></ul>
+      <ul><RouterLink to="/"><PvButton label="Editar Informacion" class="btn btn-edit"></PvButton></RouterLink></ul>
     </div>
   </div>
 
@@ -102,23 +106,6 @@ export default {
 
 <style scoped>
 
-.header {
-  text-align: center;
-  padding: 1px 0;
-  color: rgb(29, 29, 29);
-  font-size: 14px;
-  font-weight: bold;
-  display: flex;
-  margin: 20px;
-}
-
-.header2 {
-  text-align: center;
-  color: rgb(29, 29, 29);
-  font-size: 14px;
-  font-weight: bold;
-  display: flex;
-}
 
 .customer-profile-container {
   display: flex;
@@ -129,19 +116,19 @@ export default {
 }
 
 .customer-image-container {
-  width: 300px;
-  height: 300px;
+  width: 30rem;
+  height: 20rem;
   overflow: hidden;
   border-radius: 1rem;
-  border-top: 4px solid #F0BE48;
-  border-bottom: 4px solid #238ACF;
+  border-top: 4px solid #67823A;
+  border-bottom: 4px solid #B7A9E0;
 
 }
 
 .customer-image-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .customer-info-container {

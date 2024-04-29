@@ -8,7 +8,7 @@ import registerCustomerComponent from "./register/register-customer.component.vu
 import loginArtisanComponent from "./login/login-artisan.component.vue";
 import registerArtisanComponent from "./register/register-artisan.component.vue";
 import viewProfileCustomerComponent from "./profile/view-profile-customer.component.vue";
-;
+
 
 const router=createRouter({
 
