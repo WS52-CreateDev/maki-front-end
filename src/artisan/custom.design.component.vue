@@ -108,7 +108,7 @@ export default {
   margin-right: 1rem;
 }
 .design-request-form {
-  max-width: 600px;
+  
   margin: 0 auto;
   padding: 20px;
   background-color: #fff;
