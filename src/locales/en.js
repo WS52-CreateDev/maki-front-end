@@ -35,6 +35,25 @@ const en ={
     businessAddress:'Business Address',
     create: 'create Account',
     addressingRegister:'Already have an account? Log in',
+    featuredDesign:'Designs requested',
+    productname:'Product name: ',
+    Features: 'Features: ',
+    Submitted_by:'Submitted by:',
+    accept_desing:'Accept design',
+    decline_design:'Decline design',
+    go_back: 'Go back',
+    Customized_design:'Customized design',
+    product_name:'Product name',
+    featuresabout:'Additional design features or information:',
+    request_design:'Request Design',
+    customization_complete:'Customization Complete!',
+    message:'In the few hours, the artisan will contact you by any available or registered way (Whatsapp, Email, among others). Thank you ',
+    main_page:'Main page'
+
+
+
+
+
 
 
 }

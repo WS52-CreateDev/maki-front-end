@@ -8,7 +8,7 @@ import TheToolbar from "/public/the-toolbar.component.vue";
     
         <div class="card-content">
           <div class="header">
-          <h1>¡Personalización Completa!</h1>
+          <h1>{{ $t('customization_complete') }}</h1>
         </div>
           <form @submit.prevent="handleSubmit" style="
         margin: 50px">
@@ -26,12 +26,12 @@ import TheToolbar from "/public/the-toolbar.component.vue";
               </label>
             </div>
           <div class="text">
-            <p>A continuación, el artesano se comunicará con usted por cualquier via disponible o registrada (Whatsapp, Correo Electronico, entre otros). Gracias</p>
+            <p>{{ $t('message') }}</p>
           </div>
         </div>
         <div class="buttonn">
-                <router-link to="/sucess">
-                    <PvButton type="submit" class="btn btn-create" @click=create()>Pagina principal</PvButton>
+                <router-link to="/products">
+                    <PvButton type="submit" class="btn btn-create" >{{ $t('main_page') }}</PvButton>
                 </router-link>
         </div>
     
@@ -91,7 +91,7 @@ import TheToolbar from "/public/the-toolbar.component.vue";
     }
     
     .design-request-form {
-      max-width: 600px;
+     
       margin: 0 auto;
       padding: 20px;
       background-color: #fff;

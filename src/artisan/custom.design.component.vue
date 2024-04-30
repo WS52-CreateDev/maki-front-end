@@ -6,14 +6,14 @@ import TheToolbar from "/public/the-toolbar.component.vue";
   <TheToolbar/>
   <div class = "button-container">
     <RouterLink to="/products"><pv-button class="btn-back" icon="pi pi-arrow-left" rounded aria-label="Filter" /></RouterLink>
-    <RouterLink to="/products"><p style="font-weight: bold; font-size: 1.5rem;">Volver</p></RouterLink>
+    <RouterLink to="/products"><p style="font-weight: bold; font-size: 1.5rem;">{{ $t('go_back') }}</p></RouterLink>
   </div>
 
 <div class="design-request-form">
 
     <div class="card-content">
       <div class="header">
-      <h1>Diseño personalizado</h1>
+      <h1>{{ $t('Customized_design') }}</h1>
     </div>
       <form @submit.prevent="handleSubmit" style="
     margin: 50px">
@@ -29,15 +29,15 @@ import TheToolbar from "/public/the-toolbar.component.vue";
       <div class="text">
         <div class="form-group">
           
-            <input type="text" id="designName" class="design-name" v-model="designName" required placeholder="Nombre del diseño">
+            <input type="text" id="designName" class="design-name" v-model="designName" required :placeholder="$t('product_name')">
           </div>
 
           <div class="form-group">
-            <textarea id="designCharacteristics"class="design-characteristics" v-model="designCharacteristics" rows="5" required placeholder="Caracteristicas o información Adicional del diseño:"></textarea>
+            <textarea id="designCharacteristics"class="design-characteristics" v-model="designCharacteristics" rows="5" required :placeholder="$t('featuresabout')"></textarea>
           </div>
           <div class="buttonn">
             <router-link to="/sucess">
-              <PvButton type="submit" class="btn btn-create" @click=create()>Solicitar Diseño</PvButton>
+              <PvButton type="submit" class="btn btn-create" @click=create()>{{ $t('request_design') }}</PvButton>
             </router-link>
             
           </div>
@@ -53,11 +53,12 @@ import TheToolbar from "/public/the-toolbar.component.vue";
 
 <script>
 import { DesignApiService } from "../services/desing-request-api.service";
+import { v4 as uuidv4 } from 'uuid';
 export default {
     name: "RegisterCustomer",
   data() {
     return {
-      id: 3,
+      id: "",
       designName: "",
       designCharacteristics: "",
       image: "",
@@ -68,7 +69,7 @@ export default {
     
     async create() {
       const body = {
-        id: this.id,
+        id: uuidv4(),
         name: this.designName,
         caracterstics: this.designCharacteristics,
         image: this.image,

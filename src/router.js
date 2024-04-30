@@ -18,6 +18,7 @@ import updateProfileComponent from "./profile/update-profile-customer.component.
 import viewProfileArtisanComponent from "./profile/view-profile-artisan.component.vue";
 import viewProfileArtisanComercialComponent from "./profile/view-profile-artisan-comercial.component.vue";
 import updateProfileArtisanComponent from "./profile/update-profile-artisan.component.vue";
+import designRequestComponent from "./artisan/design-request.component.vue";
 
 
 const router=createRouter({
@@ -38,7 +39,8 @@ const router=createRouter({
         {path:'/profile-artisan', component:viewProfileArtisanComponent},
         {path:'/update-profile', component:updateProfileComponent},
         {path:'/profile-artisan-comercial',component:viewProfileArtisanComercialComponent},
-        {path:'/update-profile-artisan',component:updateProfileArtisanComponent}
+        {path:'/update-profile-artisan',component:updateProfileArtisanComponent},
+        {path: '/design-request', component:designRequestComponent}
     ]
 
 })

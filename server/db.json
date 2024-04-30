@@ -249,5 +249,40 @@
       "id": "6",
       "name": "Otros"
     }
+  ],
+  "design": [
+    {
+      "id": 1,
+      "name": "Un bello patron",
+      "caracteristics": "Buenas, me gustaria que diseñara un mate con este modelo. Estoy pato a cualquier precio porque vale la pena el recuerdo. Gracias",
+      "photo": "https://shorturl.at/sALT0",
+      "UserId": 1
+    },
+    {
+      "id": 2,
+      "name": "Mi persona",
+      "caracteristics": "Buenas, me gustaria que diseñara un mate con este diseño porque me representa jaja. Estaré atento a su respuesta. Gracias",
+      "photo": "https://shorturl.at/ciCM9",
+      "UserId": 2
+    },
+    {
+      "id": 3,
+      "name": "asdasdas",
+      "caracterstics": "adasdsadasda",
+      "image": "",
+      "UserId": 3
+    },
+    {
+      "id": 3,
+      "name": "",
+      "caracterstics": "",
+      "image": ""
+    },
+    {
+      "id": "688d2944-b771-4e0a-9e75-d65b51fd72c7",
+      "name": "adas",
+      "caracterstics": "222",
+      "image": ""
+    }
   ]
 }

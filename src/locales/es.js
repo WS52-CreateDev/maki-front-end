@@ -35,6 +35,21 @@ const es = {
     businessAddress:'Direccion del Negocio',
     create: 'Crear Cuenta',
     addressingRegister:'¿Ya tienes una cuenta? Inicia sesion',
+    featuredDesign:'Diseños solicitados',
+    productname:'Nombre del producto: ',
+    characteristics: 'Caracteristicas: ',
+    Submitted_by:'Enviado por:',
+    accept_desing:'Aceptar diseño',
+    decline_design:'Rechazar diseño',
+    go_back: 'Volver',
+    Customized_design:'Diseño personalizado',
+    product_name:'Nombre del producto',
+    featuresabout:'Caracteristicas o información Adicional del diseño:',
+    request_design:'Solicitar diseño',
+    customization_complete:'¡Personalización Completa!',
+    message:'A continuación, el artesano se comunicará con usted por cualquier via disponible o registrada (Whatsapp, Correo Electronico, entre otros). Gracias',
+    main_page:'Pagina principal'
+
 }
 
 export default  es

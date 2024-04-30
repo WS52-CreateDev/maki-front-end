@@ -11,4 +11,7 @@ export class DesignApiService {
     async createDesign(body) {
         return await http.post('design',body)
     }
+    async deleteDesign(id) {
+        return await http.delete('/design/' + id);
+    }
 }
