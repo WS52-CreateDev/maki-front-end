@@ -10,6 +10,7 @@ import registerArtisanComponent from "./register/register-artisan.component.vue"
 import viewProfileCustomerComponent from "./profile/view-profile-customer.component.vue";
 
 
+
 const router=createRouter({
 
     history: createWebHistory(),

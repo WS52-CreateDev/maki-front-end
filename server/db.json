@@ -1,30 +1,30 @@
 {
   "customer": [
     {
-      "id": 1,
-      "name": "Grecia Hernandez Lara",
-      "surname": "Doe",
+      "id": "1",
+      "name": "gaaa",
+      "surname": "Fernando",
       "phone": "123456789",
       "address": "123 Street",
       "email": "john@gmail.com",
-      "password": "password123",
-      "photo": "https://example.com/image1.jpg",
-      "age": 33,
-      "province": "Ica",
-      "info": "“Soy una estudiante de diseño grafico y me gusta muchas las artesanias peruanas, siento que explora mucho nuestro arte”"
-    },
-    {
-      "id": 2,
-      "name": "Alice",
-      "surname": "Smith",
-      "phone": "987654321",
-      "address": "Main Avenue",
-      "email": "alice@gmail.com",
       "password": "secret456",
       "photo": "https://example.com/image2.jpg",
       "age": 33,
       "province": "Ica",
       "info": "“Soy una estudiante de diseño grafico y me gusta muchas las artesanias peruanas, siento que explora mucho nuestro arte”"
+    },
+    {
+      "name": "Alicia",
+      "surname": "Smith",
+      "phone": "987654321",
+      "address": "Main Avenue",
+      "email": "alice@gmail.com",
+      "photo": "https://example.com/image2.jpg",
+      "age": "31",
+      "province": "Cusco",
+      "info": "“Soy una estudiante de diseño grafico y me gusta muchas las artesanias peruanas, siento que explora mucho nuestro arte”",
+      "password": "secret456",
+      "id": "2"
     },
     {
       "name": "Antonella",
@@ -34,7 +34,7 @@
       "email": "Anto@gmail.com",
       "password": "12345",
       "photo": "ass",
-      "id": 3,
+      "id": "3",
       "age": 33,
       "province": "Ica",
       "info": "“Soy una estudiante de diseño grafico y me gusta muchas las artesanias peruanas, siento que explora mucho nuestro arte”"
@@ -42,7 +42,7 @@
   ],
   "artisan": [
     {
-      "id": 1,
+      "id": "1",
       "name": "John",
       "surname": "Doe",
       "phone": "123456789",
@@ -56,7 +56,7 @@
   ],
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Chullo Peruano",
       "publication_date": "2022-03-15",
       "price": 50,
@@ -70,7 +70,7 @@
       "material": "Lana de Alpaca"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Mate de Calabaza",
       "publication_date": "2022-04-02",
       "price": 35,
@@ -84,7 +84,7 @@
       "material": "Calabaza"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Pulsera de Macramé",
       "publication_date": "2022-04-10",
       "price": 20,
@@ -98,7 +98,7 @@
       "material": "Hilo de Algodón"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Collar de Turquesa",
       "publication_date": "2023-02-15",
       "price": 35,
@@ -111,7 +111,7 @@
       "material": "Turquesa, Plata"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Bolso de Cuero Teñido",
       "publication_date": "2023-06-20",
       "price": 60,
@@ -125,7 +125,7 @@
       "material": "Cuero"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Bowl pintado a mano",
       "publication_date": "2023-08-05",
       "price": 50,
@@ -138,7 +138,7 @@
       "material": "Cerámica"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Chullo Andino",
       "publication_date": "2023-10-12",
       "price": 40,
@@ -152,7 +152,7 @@
       "material": "Lana de Alpaca"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Cerámica Chulucanas",
       "publication_date": "2023-12-05",
       "price": 55,

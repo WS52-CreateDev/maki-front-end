@@ -4,20 +4,20 @@ import TheToolbar from "/public/the-toolbar.component.vue";
 </script>
 <template>
   <the-toolbar/>
-<div>
-  <div>
-    <RouterLink to="/"> <PvButton label="<" class="btn btn-goback"></PvButton></RouterLink>
-  </div>
-  <div class="header2">
-    <h1  style="font-weight: bold; font-size: 1.5rem; text-align:center; font-size: 34px;">{{ customer.name }}</h1>
-  </div>
-
   <div>
 
+   <div>
+      <RouterLink to="/"> <PvButton label="<" class="btn btn-goback"></PvButton></RouterLink>
+    </div>
+
+   <div class="header2">
+     <h1  style="font-weight: bold; font-size: 1.5rem; text-align:center; font-size: 34px;">{{ customer.name }}</h1>
+   </div>
+
   </div>
 
-</div>
   <div class="customer-profile-container">
+
     <div class="customer-image-container">
       <img :src="customer.photo" :alt="customer.name" />
     </div>
@@ -33,7 +33,7 @@ import TheToolbar from "/public/the-toolbar.component.vue";
     </div>
 
     <div class="design-buttons">
-      <ul><RouterLink to="/"><PvButton label="Editar Informacion" class="btn btn-edit"></PvButton></RouterLink></ul>
+      <ul><PvButton @click="editProfile()" class="btn btn-edit">Editar Informacion</PvButton></ul>
     </div>
   </div>
 
@@ -46,7 +46,9 @@ import TheToolbar from "/public/the-toolbar.component.vue";
    <div class = "card">
       <PvCard class ="product-pv-card" v-for="product in productWithArtisanName" :key="product.id">
         <template #header>
-          <RouterLink :to="{ path: '/products/' + product.id }" @click="refresh(product.id)"><img :src="product.image" alt="Product Image" style="display: block; margin: 2rem auto 0; border-radius: 20px; width:150px; height:150px;"/></RouterLink>
+          <RouterLink :to="{ path: '/products/' + product.id }" @click="refresh(product.id)">
+            <img :src="product.image" alt="Product Image" style="display: block; margin: 2rem auto 0; border-radius: 20px; width:150px; height:150px;"/>
+          </RouterLink>
         </template>
         <template #content>
           <RouterLink :to="{ path: '/products/' + product.id }"><p style="font-weight: bold;">{{ product.name }}</p></RouterLink>
@@ -62,6 +64,7 @@ import TheToolbar from "/public/the-toolbar.component.vue";
 <script>
 import {CustomerApiService} from "../services/customer-api.service..js";
 import {ProductsApiService } from "../services/products-api.service.js";
+import router from "../router.js";
 
 export default {
   name: 'customer-profile',
@@ -88,6 +91,10 @@ export default {
     }
   },
   methods: {
+    async editProfile(){
+      const userId = this.$route.query.userId;
+      router.push({ path: '/update-profile', query: { userId: userId } });
+    },
     async refresh() {
         const userId = this.$route.query.userId;
         const responseCustomers = await this.CustomerApiService.getById(userId);
@@ -155,15 +162,9 @@ export default {
 
   padding: 10px 15px;
   cursor: pointer;
-  margin-bottom: px;
+  margin-bottom: 4px;
 }
 
-.card-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 .card {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
