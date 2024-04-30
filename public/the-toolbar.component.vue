@@ -24,9 +24,10 @@
           <pv-button class="language-btn-es" @click.prevent="toggleLanguage('es')">
             <img src="/src/assets/images/es-flag.png" alt="ES Flag" style="width: 1.5rem; height: 1rem;" aria-hidden="true"/>
           </pv-button>
-          <RouterLink to="/">
-            <i class="pi pi-shopping-cart" style="font-size: 2rem; padding-right: 1.5rem;" aria-hidden="true"></i>
+          <RouterLink to="/#">
+
           </RouterLink>
+
           <i class="pi pi-user" id="profile-icon" style="font-size: 2rem; padding-right: 1.5rem;" @click.prevent="toggleMenu" aria-expanded="false" aria-controls="menu" aria-haspopup="true"></i>
           <div class="menu-overlay" v-if="menuVisible" aria-labelledby="menu" aria-hidden="true" role="menu" id="menu">
             <div class="card flex justify-content-center" role="menuitem">
@@ -45,7 +46,13 @@
 import { ref } from 'vue';
 import router from "../src/router.js";
 
+
 export default {
+  computed: {
+    carrito() {
+      return carrito
+    }
+  },
   setup() {
     const menuVisible = ref(false);
     const items = ref([

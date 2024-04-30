@@ -5,10 +5,30 @@ import TheToolbar from "/public/the-toolbar.component.vue";
 <template>
 
   <TheToolbar/>
+
   <div class="featured-container">
     <h1>{{ $t('featuredTitle') }}</h1>
   </div>
-
+  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <i class="pi pi-shopping-cart" style="font-size: 2rem; padding-right: 1.5rem;" aria-hidden="true"></i>
+  </button>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">CARRITO DE COMPRAS</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <Carrito :productos="carrito" @eliminar="eliminarDelCarrito"></Carrito>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="card-container">
     <div class = "card">
       <pv-card class ="product-pv-card" v-for="product in productWithArtisanName" :key="product.id">
@@ -21,7 +41,10 @@ import TheToolbar from "/public/the-toolbar.component.vue";
           <RouterLink :to="{ path: '/products/' + product.id }"><p style="font-weight: bold;">{{ product.name }} / {{product.name_en}}</p></RouterLink>
           <p>{{ $t('madeBy') }}</p><RouterLink to="/" style="color: #238ACF;">{{ product.artisanName }}</RouterLink>
           <p style="font-weight: bold; text-align: right;">s/. {{ product.price }}</p>
+          <button @click="agregarAlCarrito(product)">Agregar al carrito</button>
         </template>
+
+
       </pv-card>
     </div>
   </div>
@@ -48,13 +71,15 @@ import TheToolbar from "/public/the-toolbar.component.vue";
 
 <script>
 import {ProductsApiService} from "/src/services/products-api.service.js";
-
+import Carrito from "/src/product/carrito.vue";
 export default {
   name: 'list-products',
+  components: {Carrito},
   data() {
     return {
       products: [],
       artisans: [],
+      carrito: [],
       productsApiService : new ProductsApiService()
     }
   },
@@ -77,6 +102,13 @@ export default {
 
       const responseArtisans = await this.productsApiService.getArtisans();
       this.artisans = responseArtisans.data;
+    },
+    agregarAlCarrito(producto) {
+      console.log(producto);
+      this.carrito.push({ ...producto });
+    },
+    eliminarDelCarrito(index) {
+      this.carrito.splice(index, 1);
     }
   }
 }
