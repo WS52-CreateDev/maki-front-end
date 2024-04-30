@@ -13,6 +13,12 @@ import customDesignComponent from "./artisan/custom.design.component.vue";
 import ListProductsComponent from "/src/product/list-products.component.vue";
 import ProductDetailsComponent from "/src/product/the-about-product.component.vue";
 import PostProductComponent from "./product/post-product.component.vue";
+import viewProfileCustomerComponent from "./profile/view-profile-customer.component.vue";
+import updateProfileComponent from "./profile/update-profile-customer.component.vue";
+import viewProfileArtisanComponent from "./profile/view-profile-artisan.component.vue";
+import viewProfileArtisanComercialComponent from "./profile/view-profile-artisan-comercial.component.vue";
+import updateProfileArtisanComponent from "./profile/update-profile-artisan.component.vue";
+
 
 const router=createRouter({
 
@@ -28,6 +34,11 @@ const router=createRouter({
         {path: '/products', component: ListProductsComponent },
         {path: '/products/:id', component: ProductDetailsComponent},
         {path: '/upload', component: PostProductComponent},
+        {path:'/profile-customer',component:viewProfileCustomerComponent},
+        {path:'/profile-artisan', component:viewProfileArtisanComponent},
+        {path:'/update-profile', component:updateProfileComponent},
+        {path:'/profile-artisan-comercial',component:viewProfileArtisanComercialComponent},
+        {path:'/update-profile-artisan',component:updateProfileArtisanComponent}
     ]
 
 })

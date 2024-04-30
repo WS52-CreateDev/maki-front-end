@@ -58,7 +58,9 @@ export default {
 
       if (response.data.length > 0) {
         alert("Login successful.");
-        router.push("/home-artisan");
+        const userId = response.data[0].id;
+        const isArtisan = response.data[0].isArtisan;
+        router.push({ path: '/products', query: { userId: userId , isArtisan: isArtisan } });
         this.$store.commit("SET_ARTISAN", response.data[0]);
       } else {
         alert("Invalid email or password.");

@@ -16,4 +16,7 @@ export class ProductsApiService {
     async createProduct(body) {
         return await http.post('alehandraxx/maki-products/products',body)
     }
+    async getProductsByArtisan(artisanId) {
+        return await http.get(`alehandraxx/maki-products/products?artisan=${artisanId}`);
+    }
 }

@@ -33,7 +33,7 @@
               <pv-menu :model="items"/>
             </div>
           </div>
-          <RouterLink to="/" class="my-profile" aria-hidden="true">{{ $t('myProfile') }}</RouterLink>
+          <PvButton class="my-profile" @click="goProfile()">{{ $t('myProfile') }}</PvButton>
         </div>
       </template>
 
@@ -43,6 +43,7 @@
 
 <script>
 import { ref } from 'vue';
+import router from "../src/router.js";
 
 export default {
   setup() {
@@ -69,6 +70,18 @@ export default {
       } else {
         this.$i18n.locale = 'es';
       }
+    },
+    goProfile(){
+      const userId = this.$route.query.userId;
+
+      const isArtisan = this.$route.query.isArtisan;
+
+      if(isArtisan == 1){
+        router.push({ path: '/profile-artisan',query: { userId: userId, isArtisan: isArtisan }});
+      }else{
+        router.push({ path: '/profile-customer',query: { userId: userId,isArtisan: isArtisan }});
+      }
+
     }
   }
 };
@@ -83,9 +96,12 @@ export default {
   border: none;
   padding: 0;
   margin: 0 15px;
+  border: 2px #cccccc;
 }
 .my-profile{
   font-size: 1.5rem;
+  background-color: white;
+  color: black;
 }
 .menu-overlay {
   position: absolute;

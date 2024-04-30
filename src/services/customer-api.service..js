@@ -6,29 +6,27 @@ const http = axios.create({
 
 export class CustomerApiService {
     async getAll() {
-        return await http.get('customer');
+        return await http.get('/customer');
     }
 
     async getById(id) {
-        return await http.get('customer/' + id);
+        return await http.get('/customer/' + id);
     }
 
     async create(body) {
-        return await http.post('customer', body);
+        return await http.post('/customerr', body);
     }
 
     async update(body, id) {
-        return await http.put('customer/' + id, body);
+        return await http.put('/customer/' + id, body);
     }
 
     async delete(id) {
-        return await http.delete('customer/' + id);
+        return await http.delete('/customer/' + id);
     }
-
 
     async loginCustomer(email, password) {
-        return http.get(`customer?email=${email}&password=${password}`);
+        return http.get(`/customer?email=${email}&password=${password}`);
     }
-
 
 }
