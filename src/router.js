@@ -8,11 +8,9 @@ import registerCustomerComponent from "./register/register-customer.component.vu
 import loginArtisanComponent from "./login/login-artisan.component.vue";
 import registerArtisanComponent from "./register/register-artisan.component.vue";
 import viewProfileCustomerComponent from "./profile/view-profile-customer.component.vue";
-
-
+import updateProfileComponent from "./profile/update-profile.component.vue";
 
 const router=createRouter({
-
     history: createWebHistory(),
     routes: [
         {path:'/', component:loginComponent},
@@ -21,9 +19,8 @@ const router=createRouter({
         {path:'/register-customer', component:registerCustomerComponent},
         {path:'/register-artisan', component:registerArtisanComponent},
         {path:'/profile-customer',component:viewProfileCustomerComponent},
+        {path:'/update-profile', component:updateProfileComponent},
     ]
-
-
 })
 
 export default router;
