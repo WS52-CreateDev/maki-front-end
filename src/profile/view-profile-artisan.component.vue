@@ -13,6 +13,7 @@ const value = 3;
       </div>
       <div class="design-buttons">
         <RouterLink to="/design-request"><PvButton  class="btn btn-mail"> Pedidos </PvButton></RouterLink>
+        <RouterLink to="/upload"><PvButton class ="add-btn" @click=""><i class="pi pi-plus">Agregar Productos</i></PvButton></RouterLink>
         
       </div>
 
@@ -170,7 +171,7 @@ export default {
   align-content: space-evenly;
 }
 
-.btn {
+.btn{
   background-color: #67823A;
   color: white;
   border: none;
@@ -178,6 +179,13 @@ export default {
   padding: 10px 15px;
   cursor: pointer;
   margin-bottom: 4px;
+}
+
+.add-btn{
+  margin-right:20px;
+  background-color:#BF9BDE;
+  border: none;
+  border-radius: 0.5rem;
 }
 
 .btn-mail{
