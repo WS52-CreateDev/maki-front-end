@@ -2,7 +2,6 @@
 import {ref} from 'vue';
 import TheToolbar from "/public/the-toolbar.component.vue";
 
-const value = ref(4);
 </script>
 
 <template>
@@ -77,7 +76,8 @@ export default {
       id: 0,
       product: [],
       artisans: [],
-      productsApiService: new ProductsApiService()
+      productsApiService: new ProductsApiService(),
+      value: ref(4)
     }
   },
   async mounted() {
