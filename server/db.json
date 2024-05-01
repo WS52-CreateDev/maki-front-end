@@ -1,0 +1,301 @@
+{
+  "customer": [
+    {
+      "name": "John",
+      "surname": "Dao",
+      "phone": "123456789",
+      "address": "123 Street",
+      "email": "john@gmail.com",
+      "photo": "https://media.licdn.com/dms/image/C5603AQE4T4uaFrPMHg/profile-displayphoto-shrink_800_800/0/1603062130110?e=2147483647&v=beta&t=ToRPqj1gIasCmTTwpMEvA4ZhvmIvHfdvi3VU_g0L0Dw",
+      "age": "35",
+      "province": "Cusco",
+      "info": "Soy un buen cliente",
+      "password": "password123",
+      "isArtisan": 0,
+      "products": [
+        1,
+        3,
+        5
+      ],
+      "id": "1"
+    },
+    {
+      "name": "Alice",
+      "surname": "Smith",
+      "phone": "987654321",
+      "address": "Main Avenue",
+      "email": "alice@gmail.com",
+      "photo": "https://img.freepik.com/free-photo/close-up-confident-adult-woman-posing_23-2148461438.jpg",
+      "age": "25",
+      "province": "Lima",
+      "info": "“Soy una estudiante de diseño grafico y me gusta muchas las artesanias peruanas, siento que explora mucho nuestro arte”",
+      "password": "secret456",
+      "isArtisan": 0,
+      "products": [
+        1,
+        3,
+        5
+      ],
+      "id": "2"
+    },
+    {
+      "name": "Antonella",
+      "surname": "gonzales",
+      "phone": "98837337",
+      "address": "lima",
+      "email": "Anto@gmail.com",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSILPFFB9RrE6Y_qVwn5g-sHdytSGi5iOhgoXzm_61WWA&s",
+      "age": "20",
+      "province": "Lima",
+      "info": "Soy una estudiante universitaria en busca de explorar el arte y artesania de mi país",
+      "password": "12345",
+      "isArtisan": 0,
+      "products": [
+        2,
+        4,
+        6
+      ],
+      "id": "3"
+    }
+  ],
+  "artisan": [
+    {
+      "name": "Juan",
+      "surname": "Casas",
+      "phone": "999 888 777",
+      "address": "123 Calle Feliz",
+      "email": "juan@gmail.com",
+      "photo": "https://elperuano.pe/fotografia/thumbnail/2021/03/19/000111455M.jpg",
+      "age": "70",
+      "province": "Cusco",
+      "info": "Soy un artesano de años de experiencia",
+      "password": "password123",
+      "isArtisan": 1,
+      "businessName": "Artesanias Casas",
+      "businessAddress": "456 Avenida Amarilla, Lima",
+      "id": "1"
+    },
+    {
+      "name": "Rosa",
+      "surname": "Perez",
+      "phone": "999 766 555",
+      "address": "345 Calle Roja",
+      "email": "rosa@gmail.com",
+      "photo": "https://portal.andina.pe/EDPfotografia3/Thumbnail/2018/03/19/000490236W.jpg",
+      "age": "54",
+      "province": "Apurimac",
+      "info": "“Soy una artesana que le gusta mucho diseñar mis prodcutos para hacer notar la variedad artistica de mi pais”",
+      "password": "password123",
+      "isArtisan": 1,
+      "businessName": "Rosa Peru",
+      "businessAddress": "111 Lima",
+      "id": "2"
+    },
+    {
+      "name": "Julio",
+      "surname": "Flores",
+      "phone": "999 744 332",
+      "address": "321 Avenida Peru",
+      "email": "julio@gmail.com",
+      "photo": "https://elcomercio.pe/resizer/TIGMyxx573AXPg1cFLhlbxuAtpE=/580x330/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/7HODVPOG7ZFQBBXRKF6I5QEWTI.jpg",
+      "age": "72",
+      "province": "Ancash",
+      "info": "Soy un artesano que le gusta diseñar productos con una gran variedad artistica",
+      "password": "password123",
+      "isArtisan": 1,
+      "businessName": "Flores Artesanal",
+      "businessAddress": "874 Calle Angosta",
+      "id": "3"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Chullo Peruano",
+      "name_en": "Peruvian Hat",
+      "publication_date": "2022-03-15",
+      "price": 50,
+      "image": "https://d15yqn4xt8exgp.cloudfront.net/media/products/BON000338/inka-products-bonnet-chullo-peruvien-alpaga-tisse-main-en-alpaga-avec-motifs-ethniques-1-20211128095320.zoom.jpeg",
+      "description": "Un hermoso chullo peruano tejido a mano con lana de alpaca, característico de la región de los Andes. Cada chullo es único y refleja la rica tradición de la artesanía peruana.",
+      "description_en": "A beautiful Peruvian chullo handwoven with alpaca wool, characteristic of the Andes region. Each chullo is unique and reflects the rich tradition of Peruvian crafts.",
+      "width": "20 cm",
+      "height": "25 cm",
+      "depth": "20 cm",
+      "artisan": 1,
+      "category": 1,
+      "material": "Lana de Alpaca / Alpaca wool"
+    },
+    {
+      "id": "2",
+      "name": "Mate de Calabaza",
+      "name_en": "Gourd Mate",
+      "publication_date": "2022-04-02",
+      "price": 35,
+      "image": "https://live.staticflickr.com/2493/3852730039_cddecb38bc_c.jpg",
+      "description": "El mate de calabaza es una bebida tradicional peruana. Está hecho de una calabaza seca que se utiliza como recipiente para beber té de hierbas o mate. Es una parte importante de la cultura y la vida diaria en Perú.",
+      "description_en": "Gourd mate is a traditional Peruvian drink. It is made from a dried pumpkin that is used as a container for drinking herbal tea or mate. It is an important part of culture and daily life in Peru.",
+      "width": "10 cm",
+      "height": "15 cm",
+      "depth": "10 cm",
+      "artisan": 2,
+      "category": 4,
+      "material": "Calabaza / Gourd"
+    },
+    {
+      "id": "3",
+      "name": "Pulsera de Macramé",
+      "name_en": "Macramé Bracelet",
+      "publication_date": "2022-04-10",
+      "price": 20,
+      "image": "https://images1.novica.net/pictures/4/p422637_2_400.jpg",
+      "description": "Una hermosa pulsera de macramé hecha a mano por artesanos peruanos. El macramé es una técnica de tejido que se utiliza para crear intrincados diseños utilizando nudos. Esta pulsera es un ejemplo impresionante de la artesanía peruana.",
+      "description_en": "A beautiful macrame bracelet handmade by Peruvian artisans. Macrame is a weaving technique used to create intricate designs using knots. This bracelet is a stunning example of Peruvian craftsmanship.",
+      "width": "5 cm",
+      "height": "5 cm",
+      "depth": "1 cm",
+      "artisan": 2,
+      "category": 2,
+      "material": "Hilo de Algodón / Cotton thread"
+    },
+    {
+      "id": "4",
+      "name": "Collar de Turquesa",
+      "name_en": "Turquoise Necklace",
+      "publication_date": "2023-02-15",
+      "price": 35,
+      "image": "https://scontent.flim38-1.fna.fbcdn.net/v/t1.6435-9/143075536_223470802776087_3957099174547953207_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEgqcHVVGBHodwLgcJKbZmfyeA51MDJcc7J4DnUwMlxzjmagcITI5f08a7dh06COdjFL9NPd8mGFHQQf_52IIce&_nc_ohc=m0Sr9VEM9qQAb4udGz2&_nc_ht=scontent.flim38-1.fna&oh=00_AfAuNnpMs0HphxQm7jNJl45Upw7GrGS79-kI2KLjG1OfVg&oe=664F8D39",
+      "description": "Este exquisito collar está hecho a mano con cuentas de turquesa natural y detalles de plata. La turquesa es conocida por sus propiedades curativas y su hermoso color azul verdoso, que añade un toque de elegancia a cualquier conjunto.",
+      "description_en": "This exquisite necklace is handcrafted with natural turquoise beads and silver details. Turquoise is known for its healing properties and its beautiful blue-green color, which adds a touch of elegance to any outfit.",
+      "width": "2 cm",
+      "height": "45 cm",
+      "artisan": 3,
+      "category": 2,
+      "material": "Turquesa, Plata / Turquoise, Silver"
+    },
+    {
+      "id": "5",
+      "name": "Bolso de Cuero Teñido",
+      "name_en": "Dyed Leather Bag",
+      "publication_date": "2023-06-20",
+      "price": 60,
+      "image": "https://images1.novica.net/pictures/4/p304112_2.jpg",
+      "description": "Este bolso artesanal está confeccionado con cuero teñido a mano, lo que le confiere un aspecto único y un acabado suave. Perfecto para llevar tus artículos esenciales con estilo, este bolso es ideal para el uso diario o para ocasiones especiales.",
+      "description_en": "This handcrafted bag is made from hand-dyed leather, giving it a unique look and soft finish. Perfect for carrying your essentials in style, this bag is ideal for everyday use or special occasions.",
+      "width": "30 cm",
+      "height": "25 cm",
+      "depth": "10 cm",
+      "artisan": 1,
+      "category": 3,
+      "material": "Cuero / Leather"
+    },
+    {
+      "id": "6",
+      "name": "Bowl pintado a mano",
+      "name_en": "Hand painted bowl",
+      "publication_date": "2023-08-05",
+      "price": 50,
+      "image": "https://tienda.figurasperuanas.com/wp/wp-content/uploads/2023/01/Artesania-2.jpg",
+      "description": "Este hermoso bowl está pintado a mano por artesanos peruanos. Cada pieza es única y presenta un diseño tradicional inspirado en la rica cultura peruana. Perfecto para servir aperitivos o decorar tu hogar con un toque de arte.",
+      "description_en": "This beautiful bowl is hand painted by Peruvian artisans. Each piece is unique and features a traditional design inspired by the rich Peruvian culture. Perfect for serving appetizers or decorating your home with a touch of art.",
+      "width": "2 cm",
+      "height": "4 cm",
+      "artisan": 3,
+      "category": 4,
+      "material": "Cerámica / Ceramic"
+    },
+    {
+      "id": "7",
+      "name": "Chullo Andino",
+      "name_en": "Andean Chullo",
+      "publication_date": "2023-10-12",
+      "price": 40,
+      "image": "https://sacredloomperu.com/storage/uploads/gallery/400-peruvian-chullo-1.jpg",
+      "description": "El chullo andino es un gorro tradicional peruano con orejeras que protegen del frío. Está hecho a mano por artesanos locales utilizando lana de alpaca, una fibra suave y cálida. Este chullo no solo es funcional sino también un símbolo de la cultura andina.",
+      "description_en": "The Andean chullo is a traditional Peruvian hat with ear flaps that protect from the cold. It is handmade by local artisans using alpaca wool, a soft and warm fiber. This chullo is not only functional but also a symbol of Andean culture.",
+      "width": "20 cm",
+      "height": "25 cm",
+      "depth": "15 cm",
+      "artisan": 1,
+      "category": 1,
+      "material": "Lana de Alpaca / Alpaca Wool"
+    },
+    {
+      "id": "8",
+      "name": "Cerámica Chulucanas",
+      "name_en": "Chulucanas Pottery",
+      "publication_date": "2023-12-05",
+      "price": 55,
+      "image": "https://media-cdn.tripadvisor.com/media/photo-s/13/e4/85/74/gallina-para-poner-huevos.jpg",
+      "description": "La cerámica Chulucanas es una forma de arte popular originaria de la región de Chulucanas en Perú. Está hecha a mano por expertos alfareros utilizando técnicas tradicionales. La cerámica Chulucanas se caracteriza por sus diseños geométricos y sus colores vibrantes.",
+      "description_en": "Chulucanas pottery is a folk art form originating from the Chulucanas region of Peru. It is handmade by expert potters using traditional techniques. Chulucanas ceramics are characterized by their geometric designs and vibrant colors.",
+      "width": "30 cm",
+      "height": "20 cm",
+      "depth": "20 cm",
+      "artisan": 2,
+      "category": 4,
+      "material": "Arcilla / Clay"
+    }
+  ],
+  "category": [
+    {
+      "id": "1",
+      "name": "Ropa"
+    },
+    {
+      "id": "2",
+      "name": "Joyas"
+    },
+    {
+      "id": "3",
+      "name": "Accesorios"
+    },
+    {
+      "id": "4",
+      "name": "Decoración"
+    },
+    {
+      "id": "5",
+      "name": "Juguetes"
+    },
+    {
+      "id": "6",
+      "name": "Otros"
+    }
+  ],
+  "design": [
+    {
+      "id": "1",
+      "name": "Un bello patron",
+      "caracteristics": "Buenas, me gustaria que diseñara un mate con este modelo. Estoy pato a cualquier precio porque vale la pena el recuerdo. Gracias",
+      "photo": "https://shorturl.at/sALT0",
+      "UserId": 1
+    },
+    {
+      "id": "2",
+      "name": "Mi persona",
+      "caracteristics": "Buenas, me gustaria que diseñara un mate con este diseño porque me representa jaja. Estaré atento a su respuesta. Gracias",
+      "photo": "https://shorturl.at/ciCM9",
+      "UserId": 2
+    },
+    {
+      "id": "3",
+      "name": "asdasdas",
+      "caracterstics": "adasdsadasda",
+      "image": "",
+      "UserId": 3
+    },
+    {
+      "id": "3",
+      "name": "",
+      "caracterstics": "",
+      "image": ""
+    },
+    {
+      "id": "688d2944-b771-4e0a-9e75-d65b51fd72c7",
+      "name": "adas",
+      "caracterstics": "222",
+      "image": ""
+    }
+ 
+  ]
+}
