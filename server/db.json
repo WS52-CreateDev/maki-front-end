@@ -20,20 +20,23 @@
       "id": "1"
     },
     {
-      "id": "2",
       "name": "Alice",
       "surname": "Smith",
       "phone": "987654321",
       "address": "Main Avenue",
       "email": "alice@gmail.com",
+      "photo": "https://img.freepik.com/free-photo/close-up-confident-adult-woman-posing_23-2148461438.jpg",
+      "age": "25",
+      "province": "Lima",
+      "info": "“Soy una estudiante de diseño grafico y me gusta muchas las artesanias peruanas, siento que explora mucho nuestro arte”",
       "password": "secret456",
-      "photo": "https://example.com/image2.jpg",
       "isArtisan": 0,
       "products": [
         1,
         3,
         5
-      ]
+      ],
+      "id": "2"
     },
     {
       "name": "Antonella",
@@ -41,15 +44,18 @@
       "phone": "98837337",
       "address": "lima",
       "email": "Anto@gmail.com",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSILPFFB9RrE6Y_qVwn5g-sHdytSGi5iOhgoXzm_61WWA&s",
+      "age": "20",
+      "province": "Lima",
+      "info": "Soy una estudiante universitaria en busca de explorar el arte y artesania de mi país",
       "password": "12345",
-      "photo": "ass",
-      "id": "3",
       "isArtisan": 0,
       "products": [
         2,
         4,
         6
-      ]
+      ],
+      "id": "3"
     }
   ],
   "artisan": [
@@ -75,12 +81,15 @@
       "phone": "999 766 555",
       "address": "345 Calle Roja",
       "email": "rosa@gmail.com",
+      "photo": "https://portal.andina.pe/EDPfotografia3/Thumbnail/2018/03/19/000490236W.jpg",
+      "age": "54",
+      "province": "Apurimac",
+      "info": "“Soy una artesana que le gusta mucho diseñar mis prodcutos para hacer notar la variedad artistica de mi pais”",
+      "password": "password123",
+      "isArtisan": 1,
       "businessName": "Rosa Peru",
       "businessAddress": "111 Lima",
-      "password": "password123",
-      "photo": "https://portal.andina.pe/EDPfotografia3/Thumbnail/2018/03/19/000490236W.jpg",
-      "id": "2",
-      "isArtisan": 1
+      "id": "2"
     },
     {
       "name": "Julio",
@@ -88,12 +97,15 @@
       "phone": "999 744 332",
       "address": "321 Avenida Peru",
       "email": "julio@gmail.com",
+      "photo": "https://elcomercio.pe/resizer/TIGMyxx573AXPg1cFLhlbxuAtpE=/580x330/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/7HODVPOG7ZFQBBXRKF6I5QEWTI.jpg",
+      "age": "72",
+      "province": "Ancash",
+      "info": "Soy un artesano que le gusta diseñar productos con una gran variedad artistica",
+      "password": "password123",
+      "isArtisan": 1,
       "businessName": "Flores Artesanal",
       "businessAddress": "874 Calle Angosta",
-      "password": "password123",
-      "photo": "https://elcomercio.pe/resizer/TIGMyxx573AXPg1cFLhlbxuAtpE=/580x330/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/7HODVPOG7ZFQBBXRKF6I5QEWTI.jpg",
-      "id": "3",
-      "isArtisan": 1
+      "id": "3"
     }
   ],
   "products": [

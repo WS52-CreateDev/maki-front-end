@@ -9,8 +9,12 @@ const value = 3;
 
     <div>
       <div>
-        <PvButton @click="goBackToProducts()"  class="btn btn-goback"> < </PvButton>
+        <PvButton @click="goBackToProducts()"  class="btn btn-back"> < </PvButton>
       </div>
+      <div class="design-buttons">
+        <PvButton  class="btn btn-mail"> Pedidos </PvButton>
+      </div>
+
     </div>
 
     <div class="header2">
@@ -55,7 +59,7 @@ const value = 3;
         </template>
         <template #content>
           <RouterLink :to="{ path: '/products/' + product.id }"><p style="font-weight: bold;">{{ product.name }}</p></RouterLink>
-          <p>hecho por</p><RouterLink to="/" style="color: #238ACF;">{{ product.artisanName }}</RouterLink>
+          <p>hecho por</p><RouterLink @click="setArtisanId(product.artisanId)" to="/profile-artisan-comercial" style="color: #238ACF;">{{ product.artisanName }}</RouterLink>
           <p style="font-weight: bold; text-align: right;">s/. {{ product.price }}</p>
         </template>
       </PvCard>
@@ -88,12 +92,15 @@ export default {
       return this.products.map(product => {
         const artisan = this.artisans.find(artisan => artisan.id === product.artisan);
         const artisanName = artisan ? `${artisan.name} ${artisan.surname}` : '';
-        return { ...product, artisanName };
+        const artisanId = artisan ? artisan.id: null ;
+        return { ...product, artisanName,artisanId };
       });
     }
   },
   methods: {
-
+    async setArtisanId(id){
+      sessionStorage.setItem('artisanId',id)
+    },
     async goBackToProducts(){
       router.push({ path: '/products'});
     },
@@ -169,6 +176,12 @@ export default {
   padding: 10px 15px;
   cursor: pointer;
   margin-bottom: 4px;
+}
+
+.btn-mail{
+  margin-right:20px;
+  background-color:#BF9BDE;
+
 }
 
 .card {
