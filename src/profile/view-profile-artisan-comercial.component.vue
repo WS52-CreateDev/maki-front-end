@@ -55,7 +55,7 @@ const value = 3;
         </template>
         <template #content>
           <RouterLink :to="{ path: '/products/' + product.id }"><p style="font-weight: bold;">{{ product.name }}</p></RouterLink>
-          <p>hecho por</p><RouterLink to="/" style="color: #238ACF;">{{ product.artisanName }}</RouterLink>
+          <p>hecho por</p><RouterLink @click="setArtisanId(product.artisanId) "to="/profile-artisan-comercial" style="color: #238ACF;">{{ product.artisanName }}</RouterLink>
           <p style="font-weight: bold; text-align: right;">s/. {{ product.price }}</p>
         </template>
       </PvCard>
@@ -88,23 +88,25 @@ export default {
       return this.products.map(product => {
         const artisan = this.artisans.find(artisan => artisan.id === product.artisan);
         const artisanName = artisan ? `${artisan.name} ${artisan.surname}` : '';
-        return { ...product, artisanName };
+        const artisanId = artisan? artisan.id : null;
+        return { ...product, artisanName, artisanId };
       });
     }
   },
   methods: {
 
     async goBackToProducts(){
-      const userId = this.$route.query.userId;
-      const isArtisan = this.$route.query.isArtisan;
-      router.push({ path: '/products', query: { userId: userId, isArtisan:isArtisan} });
-    },
 
+      router.push({ path: '/products' });
+    },
+    async setArtisanId(id){
+      sessionStorage.setItem('artisanId',id);
+    },
     async refresh() {
-      const userId = this.$route.query.userId;
-      const responseartisans = await this.ArtisanApiService.getById(userId);
+      const artisanId = sessionStorage.getItem('artisanId')
+      const responseartisans = await this.ArtisanApiService.getById(artisanId);
       this.artisan = responseartisans.data;
-      const responseProducts = await this.ProductsApiService.getProductsByArtisan(userId);
+      const responseProducts = await this.ProductsApiService.getProductsByArtisan(artisanId);
       this.products = responseProducts.data;
 
       const responseArtisans = await this.ProductsApiService.getArtisans();

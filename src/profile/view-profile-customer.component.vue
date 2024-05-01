@@ -53,7 +53,7 @@ const value = 3;
         </template>
         <template #content>
           <RouterLink :to="{ path: '/products/' + product.id }"><p style="font-weight: bold;">{{ product.name }}</p></RouterLink>
-          <p>hecho por</p><RouterLink to="/" style="color: #238ACF;">{{ product.artisanName }}</RouterLink>
+          <p>hecho por</p><RouterLink  @click="setArtisanId(product.artisanId)"  to="/profile-artisan-comercial" style="color: #238ACF;">{{ product.artisanName }}</RouterLink>
           <p style="font-weight: bold; text-align: right;">s/. {{ product.price }}</p>
         </template>
       </PvCard>
@@ -88,7 +88,8 @@ export default {
           .map(product => {
             const artisan = this.artisans.find(artisan => artisan.id === product.artisan);
             const artisanName = artisan ? `${artisan.name} ${artisan.surname}` : '';
-            return { ...product, artisanName };
+            const artisanId = artisan ? artisan.id : null;
+            return { ...product, artisanName, artisanId };
           });
     }
   },
@@ -96,6 +97,10 @@ export default {
 
     async goBackToProducts(){
       router.push({ path: '/products'});
+    },
+
+    async setArtisanId(id){
+      sessionStorage.setItem('artisanId',id);
     },
 
     async editProfile(){

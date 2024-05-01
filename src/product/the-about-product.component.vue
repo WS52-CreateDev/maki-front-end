@@ -27,7 +27,7 @@ const value = ref(4);
     <div class ="product-info">
       <p style="font-weight: bold; font-size: 2.3rem;">{{ product.name }} / </p>
       <p style="font-weight: bold; font-size: 2rem;">{{ product.name_en }}</p>
-      <p style="display: inline;">{{$t('madeBy')}}:  </p><RouterLink to="/" style="color: #238ACF;">{{ productWithArtisanName.artisanName }}</RouterLink>
+      <p style="display: inline;">{{$t('madeBy')}}:  </p><RouterLink @click="setArtisanId(productWithArtisanName.artisanId)" to="/profile-artisan-comercial" style="color: #238ACF;">{{ productWithArtisanName.artisanName }}</RouterLink>
       <br><br>
       <p>{{$t('handcrafted')}}</p>
       <p style="font-weight: bold; display: inline;">{{$t('materials')}}: </p>
@@ -89,10 +89,14 @@ export default {
     productWithArtisanName() {
       const artisan = this.artisans.find(artisan => artisan.id === this.product.artisan);
       const artisanName = artisan ? `${artisan.name} ${artisan.surname}` : '';
-      return { ...this.product, artisanName };
+      const artisanId = artisan ? artisan.id : null;
+      return { ...this.product, artisanName, artisanId };
     }
   },
   methods: {
+    async setArtisanId(id){
+      sessionStorage.setItem("artisanId",id);
+    },
     async getProduct() {
       const response = await this.productsApiService.getProductById(this.id);
       this.product = response.data;

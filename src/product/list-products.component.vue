@@ -39,7 +39,7 @@ import TheToolbar from "/public/the-toolbar.component.vue";
         </template>
         <template #content>
           <RouterLink :to="{ path: '/products/' + product.id }"><p style="font-weight: bold;">{{ product.name }} / {{product.name_en}}</p></RouterLink>
-          <p>{{ $t('madeBy') }}</p><RouterLink to="/" style="color: #238ACF;">{{ product.artisanName }}</RouterLink>
+          <p>{{ $t('madeBy') }}</p><RouterLink  @click="setArtisanId(product.artisanId)" to="/profile-artisan-comercial" style="color: #238ACF;">{{ product.artisanName }}</RouterLink>
           <p style="font-weight: bold; text-align: right;">s/. {{ product.price }}</p>
           <button @click="agregarAlCarrito(product)">Agregar al carrito</button>
         </template>
@@ -57,7 +57,7 @@ import TheToolbar from "/public/the-toolbar.component.vue";
     <div class = "card">
       <pv-card class ="artisan-pv-card" v-for="artisan in artisans" :key="artisan.id">
         <template #header>
-          <RouterLink to="/"><img :src="artisan.photo" alt="Artisan Image" style="display: block; margin: 0 auto 0; border-radius: 20px; width:15rem; height:150px;"/></RouterLink>
+          <RouterLink  @click="setArtisanId(artisan.id)"  to="/profile-artisan-comercial"><img :src="artisan.photo" alt="Artisan Image" style="display: block; margin: 0 auto 0; border-radius: 20px; width:15rem; height:150px;"/></RouterLink>
         </template>
         <template #content>
           <RouterLink to="/"><p style="font-weight: bold; text-align: center;">{{ artisan.name + ' ' + artisan.surname}}</p></RouterLink>
@@ -91,11 +91,15 @@ export default {
       return this.products.map(product => {
         const artisan = this.artisans.find(artisan => artisan.id === product.artisan);
         const artisanName = artisan ? `${artisan.name} ${artisan.surname}` : '';
-        return { ...product, artisanName };
+        const artisanId = artisan ? artisan.id : null;
+        return { ...product, artisanName,artisanId };
       });
     }
   },
   methods: {
+    async setArtisanId(id) {
+      sessionStorage.setItem('artisanId',id);
+    },
     async refresh(){
       const responseProducts = await this.productsApiService.getProducts();
       this.products = responseProducts.data;
