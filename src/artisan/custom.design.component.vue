@@ -5,8 +5,8 @@ import TheToolbar from "/public/the-toolbar.component.vue";
 <template>
   <TheToolbar/>
   <div class = "button-container">
-    <RouterLink to="/products"><pv-button class="btn-back" icon="pi pi-arrow-left" rounded aria-label="Filter" /></RouterLink>
-    <RouterLink to="/products"><p style="font-weight: bold; font-size: 1.5rem;">{{ $t('go_back') }}</p></RouterLink>
+    <RouterLink to="/profile-artisan-comercial"><pv-button class="btn-back" icon="pi pi-arrow-left" rounded aria-label="Filter" /></RouterLink>
+    <RouterLink to="/profile-artisan-comercial"><p style="font-weight: bold; font-size: 1.5rem;">{{ $t('go_back') }}</p></RouterLink>
   </div>
 
 <div class="design-request-form">

@@ -12,7 +12,8 @@ const value = 3;
         <PvButton @click="goBackToProducts()"  class="btn btn-back"> < </PvButton>
       </div>
       <div class="design-buttons">
-        <PvButton  class="btn btn-mail"> Pedidos </PvButton>
+        <RouterLink to="/design-request"><PvButton  class="btn btn-mail"> Pedidos </PvButton></RouterLink>
+        
       </div>
 
     </div>
@@ -72,6 +73,7 @@ const value = 3;
 import {ArtisanApiService} from "../services/artisan-api.service.js";
 import {ProductsApiService } from "../services/products-api.service.js";
 import router from "../router.js";
+import { RouterLink } from "vue-router";
 
 export default {
   name: 'artisan-profile',

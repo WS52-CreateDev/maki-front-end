@@ -36,7 +36,7 @@ const value = 3;
     </div>
 
     <div class="design-buttons">
-      <ul><PvButton class="btn btn-edit">Solicitar Diseño</PvButton></ul>
+      <ul><RouterLink to="/custom-design"><PvButton class="btn btn-edit">Solicitar Diseño</PvButton></RouterLink></ul>
     </div>
   </div>
 
