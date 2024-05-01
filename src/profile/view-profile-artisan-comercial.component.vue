@@ -1,6 +1,6 @@
 <script setup>
 import TheToolbar from "/public/the-toolbar.component.vue";
-const value = 3;
+
 
 </script>
 <template>
@@ -78,6 +78,7 @@ export default {
       products: [],
       ProductsApiService: new ProductsApiService(),
       ArtisanApiService: new ArtisanApiService(),
+      value:3
     }
   },
   mounted() {
