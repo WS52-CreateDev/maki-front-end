@@ -60,7 +60,9 @@ export default {
         alert("Login successful.");
         const userId = response.data[0].id;
         const isArtisan = response.data[0].isArtisan;
-        router.push({ path: '/products', query: { userId: userId , isArtisan: isArtisan } });
+        sessionStorage.setItem('userId', userId);
+        sessionStorage.setItem('isArtisan', isArtisan);
+        router.push({ path: '/products' });
         this.$store.commit("SET_ARTISAN", response.data[0]);
       } else {
         alert("Invalid email or password.");

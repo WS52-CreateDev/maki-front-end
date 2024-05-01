@@ -95,17 +95,13 @@ export default {
   methods: {
 
     async goBackToProducts(){
-      const userId = this.$route.query.userId;
-      const isArtisan = this.$route.query.isArtisan;
-      router.push({ path: '/products', query: { userId: userId, isArtisan:isArtisan} });
+      router.push({ path: '/products'});
     },
     async editProfile(){
-      const userId = this.$route.query.userId;
-      const isArtisan = this.$route.query.isArtisan;
-      router.push({ path: '/update-profile-artisan', query: { userId: userId, isArtisan:isArtisan } });
+      router.push({ path: '/update-profile-artisan'});
     },
     async refresh() {
-      const userId = this.$route.query.userId;
+      const userId = sessionStorage.getItem('userId');
       const responseartisans = await this.ArtisanApiService.getById(userId);
       this.artisan = responseartisans.data;
       const responseProducts = await this.ProductsApiService.getProductsByArtisan(userId);

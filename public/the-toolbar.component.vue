@@ -79,14 +79,12 @@ export default {
       }
     },
     goProfile(){
-      const userId = this.$route.query.userId;
-
-      const isArtisan = this.$route.query.isArtisan;
+      const isArtisan = sessionStorage.getItem('isArtisan');
 
       if(isArtisan == 1){
-        router.push({ path: '/profile-artisan',query: { userId: userId, isArtisan: isArtisan }});
+        router.push({ path: '/profile-artisan'});
       }else{
-        router.push({ path: '/profile-customer',query: { userId: userId,isArtisan: isArtisan }});
+        router.push({ path: '/profile-customer'});
       }
 
     }

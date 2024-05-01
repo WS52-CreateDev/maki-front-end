@@ -112,21 +112,20 @@ import TheToolbar from "/public/the-toolbar.component.vue";
           isArtisan: this.customerisArtisan,
           products : this.customerProducts
         }
-        const userId = this.$route.query.userId;
-        const isArtisan = this.$route.query.isArtisan;
+        const userId = sessionStorage.getItem('userId')
         const responseUpdate = await this.CustomerApiService.update(body,userId);
 
         if(responseUpdate.status == 200){
           alert("Customer updated successfully.");
           this.refresh();
-          router.push({ path: '/profile-customer',query: { userId: userId, isArtisan: isArtisan}});
+          router.push({ path: '/profile-customer'});
         }else{
           alert("Error updating customer")
         }
       },
 
       async refresh(){
-        const userId = this.$route.query.userId;
+        const userId = sessionStorage.getItem('userId');
         const responseCustomer = await this.CustomerApiService.getById(userId);
         this.customer = responseCustomer.data;
         this.customerName = responseCustomer.data.name;

@@ -125,21 +125,20 @@ export default {
         businessName: this.artisanBusinessName,
         businessAddress: this.artisanBusinessAddress,
       }
-      const userId = this.$route.query.userId;
-      const isArtisan = this.$route.query.isArtisan;
+      const userId = sessionStorage.getItem('userId');
       const responseUpdate = await this.ArtisanApiService.update(body,userId);
 
       if(responseUpdate.status == 200){
         alert("artisan updated successfully.");
         this.refresh();
-        router.push({ path: '/profile-artisan',query: { userId: userId, isArtisan: isArtisan}});
+        router.push({ path: '/profile-artisan'});
       }else{
         alert("Error updating artisan")
       }
     },
 
     async refresh(){
-      const userId = this.$route.query.userId;
+      const userId = sessionStorage.getItem('userId')
       const responseartisan = await this.ArtisanApiService.getById(userId);
       this.artisan = responseartisan.data;
       this.artisanName = responseartisan.data.name;
