@@ -48,14 +48,17 @@ const en ={
     request_design:'Request Design',
     customization_complete:'Customization Complete!',
     message:'In the few hours, the artisan will contact you by any available or registered way (Whatsapp, Email, among others). Thank you ',
-    main_page:'Main page'
-
-
-
-
-
-
-
+    main_page:'Main page',
+    shoppingCart: 'Shopping Cart',
+    close: 'Close',
+    save: 'Save',
+    seeAll: 'See all',
+    return: 'Return',
+    product: 'Product',
+    urlImage: 'Image URL',
+    descriptionProduct: 'Description',
+    category: 'Category',
+    uploadProduct: 'Upload Product',
 }
 
 export default en;

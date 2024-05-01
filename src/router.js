@@ -20,7 +20,6 @@ import viewProfileArtisanComercialComponent from "./profile/view-profile-artisan
 import updateProfileArtisanComponent from "./profile/update-profile-artisan.component.vue";
 import designRequestComponent from "./artisan/design-request.component.vue";
 
-
 const router=createRouter({
 
     history: createWebHistory(),
@@ -40,7 +39,7 @@ const router=createRouter({
         {path:'/update-profile', component:updateProfileComponent},
         {path:'/profile-artisan-comercial',component:viewProfileArtisanComercialComponent},
         {path:'/update-profile-artisan',component:updateProfileArtisanComponent},
-        {path: '/design-request', component:designRequestComponent}
+        {path: '/design-request', component:designRequestComponent},
     ]
 
 })

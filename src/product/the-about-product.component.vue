@@ -9,7 +9,7 @@ const value = ref(4);
   <TheToolbar/>
   <div class="button-container">
     <RouterLink to="/products"><pv-button class="btn-back" icon="pi pi-arrow-left" rounded aria-label="Filter" /></RouterLink>
-    <RouterLink to="/products"><p style="font-weight: bold; font-size: 1.5rem;">Ver Todos</p></RouterLink>
+    <RouterLink to="/products"><p style="font-weight: bold; font-size: 1.5rem;">{{ $t('seeAll') }}</p></RouterLink>
   </div>
 
   <div class = "card-container">
@@ -57,9 +57,9 @@ const value = ref(4);
       </div>
 
       <div class ="shopping-buttons">
-        <pv-button class = "add-to-cart">{{$t('addToCart')}}</pv-button>
+        <pv-button class = "add-to-cart" @click="inDevelopment()">{{$t('addToCart')}}</pv-button>
         <br>
-        <pv-button class = "buy-now">{{$t('buyNow')}}</pv-button>
+        <pv-button class = "buy-now" @click="inDevelopment()">{{$t('buyNow')}}</pv-button>
       </div>
     </div>
 
@@ -104,6 +104,9 @@ export default {
     async refresh() {
       const responseArtisans = await this.productsApiService.getArtisans();
       this.artisans = responseArtisans.data;
+    },
+    async inDevelopment(){
+      alert("Opcion en desarrollo, disculpe las molestias!");
     }
   }
 }
@@ -118,12 +121,16 @@ export default {
   background-color: #67823A;
   border-color: #67823A;
   margin-right: 1rem;
+  border-radius:1.5rem;
+}
+.card{
+  display: flex;
+  border: 0;
 }
 .card-container{
   display: flex;
-  align-items: center;
   margin-left: 5rem;
-  margin-bottom: 5rem;
+  border: 0;
 }
 .product-pv-card{
   height: 26rem;
@@ -137,11 +144,12 @@ export default {
   margin-left: 8rem;
 }
 .product-info{
-  margin-left: 4rem;
+  margin-left: 20rem;
   margin-right: 4rem;
   font-size: 1.5rem;
   font-weight: bold;
   border-right: 3px solid #D9D9D9;
+  margin-bottom: 5rem;
 }
 .shipping-info{
   margin-right: 2rem;

@@ -18,61 +18,61 @@ const categories = ref([
   <TheToolbar/>
   <div class = "button-container">
     <RouterLink to="/products"><pv-button class="btn-back" icon="pi pi-arrow-left" rounded aria-label="Filter" /></RouterLink>
-    <RouterLink to="/products"><p style="font-weight: bold; font-size: 1.5rem;">Volver</p></RouterLink>
+    <RouterLink to="/products"><p style="font-weight: bold; font-size: 1.5rem;">{{ $t('return') }}</p></RouterLink>
   </div>
 
   <div class="product-card">
     <div class="product-title">
-      <h1>Producto</h1>
+      <h1>{{ $t('product') }}</h1>
     </div>
 
     <div class="product-form">
 
       <div class ="product-image">
         <img src="/src/assets/images/placeholder-image.jpg" alt="Upload Image" style="display: block; width:15rem; height:15rem;"/>
-        <label for="name">URL de la imagen</label> <br>
+        <label for="name">{{ $t('urlImage') }}</label> <br>
         <pv-input-text id="image" v-model="image" aria-describedby="image-help" />
       </div>
 
 
       <div class="product-info">
         <div class="product-name">
-          <label for="name">Nombre del producto</label> <br>
+          <label for="name">{{ $t('productName') }}</label> <br>
           <pv-input-text id="name" v-model="name" aria-describedby="name-help" />
         </div>
 
         <div class="product-width">
-          <label for="width">Ancho</label> <br>
+          <label for="width">{{ $t('width') }}</label> <br>
           <pv-input-text id="width" v-model="width" aria-describedby="width-help" />
         </div>
 
         <div class="product-height">
-          <label for="height">Alto</label> <br>
+          <label for="height">{{ $t('height') }}</label> <br>
           <pv-input-text id="height" v-model="height" aria-describedby="height-help" />
         </div>
 
         <div class="product-depth">
-          <label for="depth">Fondo</label> <br>
+          <label for="depth">{{ $t('depth') }}</label> <br>
           <pv-input-text id="depth" v-model="depth" aria-describedby="depth-help" />
         </div>
 
         <div class="product-material">
-          <label for="material">Materiales</label> <br>
+          <label for="material">{{ $t('materials') }}</label> <br>
           <pv-input-text id="material" v-model="material" aria-describedby="material-help" />
         </div>
 
         <div class="product-price">
-          <label for="price">Precio</label> <br>
+          <label for="price">{{ $t('price') }}</label> <br>
           <pv-input-text id="price" v-model="price" aria-describedby="price-help" />
         </div>
 
         <div class="product-description">
-          <label for="description">Descripción</label> <br>
+          <label for="description">{{ $t('descriptionProduct') }}</label> <br>
           <pv-textarea id="description" v-model="description"  autoResize rows="5" cols="30" />
         </div>
 
         <div class="product-category">
-          <label for="category">Categoría</label> <br>
+          <label for="category">{{ $t('category') }}</label> <br>
           <pv-dropdown id ="category" v-model="category" :options="categories" optionLabel="name" placeholder="Selecciona una categoría"
                        @click="handleCategoryChange"/>
         </div>
@@ -82,7 +82,7 @@ const categories = ref([
     </div>
 
     <div class="post-button-container">
-      <pv-button class = "post-btn" @click="create()">Subir producto</pv-button>
+      <pv-button class = "post-btn" @click="create()">{{ $t('uploadProduct') }} </pv-button>
     </div>
   </div>
 
@@ -159,6 +159,7 @@ export default {
   background-color: #67823A;
   border-color: #67823A;
   margin-right: 1rem;
+  border-radius:1.5rem;
 }
 .product-title{
   display: flex;

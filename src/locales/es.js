@@ -48,8 +48,18 @@ const es = {
     request_design:'Solicitar diseño',
     customization_complete:'¡Personalización Completa!',
     message:'A continuación, el artesano se comunicará con usted por cualquier via disponible o registrada (Whatsapp, Correo Electronico, entre otros). Gracias',
-    main_page:'Pagina principal'
-
+    main_page:'Pagina principal',
+    shoppingCart: 'Carrito de Compras',
+    close: 'Cerrar',
+    save: 'Guardar',
+    seeAll: 'Ver todos',
+    return: 'Volver',
+    product: 'Producto',
+    urlImage: 'URL de la imagen',
+    productName: 'Nombre del Producto',
+    descriptionProduct: 'Descripción',
+    category: 'Categoria',
+    uploadProduct: 'Subir Producto',
 }
 
 export default  es

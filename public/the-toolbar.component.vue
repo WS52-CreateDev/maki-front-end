@@ -34,7 +34,7 @@
               <pv-menu :model="items"/>
             </div>
           </div>
-          <PvButton class="my-profile" @click="goProfile()">{{ $t('myProfile') }}</PvButton>
+          <pv-button class="my-profile" @click="goProfile()">{{ $t('myProfile') }}</pv-button>
         </div>
       </template>
 
@@ -107,6 +107,7 @@ export default {
   font-size: 1.5rem;
   background-color: white;
   color: black;
+  border: 0 solid white;
 }
 .menu-overlay {
   position: absolute;
@@ -117,6 +118,10 @@ export default {
 @media (hover: hover) {
   #profile-icon:hover{
     cursor: pointer;
+    transition: 0.4s;
+    color: hsla(160, 100%, 37%, 1);
+  }
+  .my-profile:hover{
     transition: 0.4s;
     color: hsla(160, 100%, 37%, 1);
   }
