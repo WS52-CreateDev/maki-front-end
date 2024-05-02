@@ -90,6 +90,7 @@ export default {
         businessAddress: this.businessAddress,
         password: this.password,
         photo: this.photo,
+        isArtisan: 1
       };
 
       const response = await this.artisanApiService.create(body);

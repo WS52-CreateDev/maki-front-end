@@ -14,7 +14,7 @@ export class CustomerApiService {
     }
 
     async create(body) {
-        return await http.post('/customerr', body);
+        return await http.post('/customer', body);
     }
 
     async update(body, id) {

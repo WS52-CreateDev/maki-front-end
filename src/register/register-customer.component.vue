@@ -73,6 +73,7 @@ export default {
         email: this.email,
         password: this.password,
         photo: this.photo,
+        isArtisan: 0
       };
 
       const response = await this.customerApiService.create(body);
