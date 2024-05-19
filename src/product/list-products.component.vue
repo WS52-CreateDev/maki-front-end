@@ -73,7 +73,7 @@ import TheToolbar from "/public/the-toolbar.component.vue";
 
 <script>
 import {ProductsApiService} from "/src/services/products-api.service.js";
-import Carrito from "/src/product/carrito.vue";
+import Carrito from "/src/product/shopping-cart.vue";
 export default {
   name: 'list-products',
   components: {Carrito},
@@ -100,9 +100,9 @@ export default {
   },
   methods: {
     async setArtisanId(id) {
-      sessionStorage.setItem('artisanId',id);
+      sessionStorage.setItem('artisanId', id);
     },
-    async refresh(){
+    async refresh() {
       const responseProducts = await this.productsApiService.getProducts();
       this.products = responseProducts.data;
 
@@ -112,7 +112,7 @@ export default {
     agregarAlCarrito(producto) {
       console.log(producto);
       alert("Producto agregado al carrito!");
-      this.carrito.push({ ...producto });
+      this.carrito.push({ ...producto, quantity: 1 });
     },
     eliminarDelCarrito(index) {
       this.carrito.splice(index, 1);
@@ -122,62 +122,73 @@ export default {
 </script>
 
 <style scoped>
-.featured-container{
+.featured-container {
   display: flex;
   padding: 0 3rem;
 }
-.featured-container h1{
+
+.featured-container h1 {
   font-size: 2rem;
   font-weight: bold;
 }
-.shopping-cart{
+
+.shopping-cart {
   display: flex;
   justify-content: right;
   padding: 0 3rem;
 }
-.shopping-btn{
+
+.shopping-btn {
   padding: 0;
   border: 0 solid;
   background-color: white;
 }
-.card-container{
+
+.card-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
 .card {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 50px;
   border: 0 solid white;
 }
-.product-pv-card{
+
+.product-pv-card {
   width: 20rem;
   height: 25rem;
   border-radius: 1rem;
   border-top: 4px solid #67823A;
   border-bottom: 4px solid #B7A9E0;
 }
-.artisans-container{
+
+.artisans-container {
   display: flex;
   padding: 0 3rem;
 }
-.artisans-container h1{
+
+.artisans-container h1 {
   font-size: 2rem;
   font-weight: bold;
 }
-.artisan-pv-card{
+
+.artisan-pv-card {
   width: 15rem;
   height: 15rem;
   border-radius: 20px;
   border-top: 4px solid #F0BE48;
   border-bottom: 4px solid #238ACF;
 }
+
 img {
   transition: 0.4s ease;
 }
-.cart-btn{
+
+.cart-btn {
   margin-left: 16rem;
   position: absolute;
   background-color: #B7A9E0;
@@ -186,21 +197,27 @@ img {
   border-radius: 20px;
   padding: 0.5rem;
 }
+
 @media (hover: hover) {
   .product-pv-card img:hover {
     transform: scale(1.1);
   }
+
   .artisan-pv-card:hover {
     transition: 0.4s ease;
     transform: scale(1.1);
   }
-  .cart-btn:hover{
+
+  .cart-btn:hover {
     transition: 0.4s ease;
     background-color: #9a8fbc;
   }
-  .shopping-btn:hover{
+
+  .shopping-btn:hover {
     transition: 0.4s ease;
     color: #67823A;
   }
 }
+
+
 </style>
