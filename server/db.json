@@ -121,7 +121,7 @@
       "width": "20 cm",
       "height": "25 cm",
       "depth": "20 cm",
-      "artisan": 1,
+      "artisan": "1",
       "category": 1,
       "material": "Lana de Alpaca / Alpaca wool"
     },
@@ -137,7 +137,7 @@
       "width": "10 cm",
       "height": "15 cm",
       "depth": "10 cm",
-      "artisan": 2,
+      "artisan": "2",
       "category": 4,
       "material": "Calabaza / Gourd"
     },
@@ -153,7 +153,7 @@
       "width": "5 cm",
       "height": "5 cm",
       "depth": "1 cm",
-      "artisan": 2,
+      "artisan": "2",
       "category": 2,
       "material": "Hilo de Algodón / Cotton thread"
     },
@@ -168,7 +168,7 @@
       "description_en": "This exquisite necklace is handcrafted with natural turquoise beads and silver details. Turquoise is known for its healing properties and its beautiful blue-green color, which adds a touch of elegance to any outfit.",
       "width": "2 cm",
       "height": "45 cm",
-      "artisan": 3,
+      "artisan": "3",
       "category": 2,
       "material": "Turquesa, Plata / Turquoise, Silver"
     },
@@ -184,7 +184,7 @@
       "width": "30 cm",
       "height": "25 cm",
       "depth": "10 cm",
-      "artisan": 1,
+      "artisan": "1",
       "category": 3,
       "material": "Cuero / Leather"
     },
@@ -199,7 +199,7 @@
       "description_en": "This beautiful bowl is hand painted by Peruvian artisans. Each piece is unique and features a traditional design inspired by the rich Peruvian culture. Perfect for serving appetizers or decorating your home with a touch of art.",
       "width": "2 cm",
       "height": "4 cm",
-      "artisan": 3,
+      "artisan": "3",
       "category": 4,
       "material": "Cerámica / Ceramic"
     },
@@ -215,7 +215,7 @@
       "width": "20 cm",
       "height": "25 cm",
       "depth": "15 cm",
-      "artisan": 1,
+      "artisan": "1",
       "category": 1,
       "material": "Lana de Alpaca / Alpaca Wool"
     },
@@ -231,7 +231,7 @@
       "width": "30 cm",
       "height": "20 cm",
       "depth": "20 cm",
-      "artisan": 2,
+      "artisan": "2",
       "category": 4,
       "material": "Arcilla / Clay"
     }

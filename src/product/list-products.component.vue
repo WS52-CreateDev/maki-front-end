@@ -21,7 +21,7 @@ import TheToolbar from "/public/the-toolbar.component.vue";
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <Carrito :productos="carrito" @eliminar="eliminarDelCarrito"></Carrito>
+            <ShoppingCart :productos="shoppingCart" @eliminar="deleteFromCart"></ShoppingCart>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ $t('close') }}</button>
@@ -35,7 +35,7 @@ import TheToolbar from "/public/the-toolbar.component.vue";
     <div class = "card">
       <pv-card class ="product-pv-card" v-for="product in productWithArtisanName" :key="product.id">
         <template #header>
-          <pv-button class ="cart-btn" @click="agregarAlCarrito(product)"><i class="pi pi-cart-plus"></i></pv-button>
+          <pv-button class ="cart-btn" @click="addToCart(product)"><i class="pi pi-cart-plus"></i></pv-button>
           <RouterLink :to="{ path: '/products/' + product.id }" @click="refresh(product.id)">
             <img :src="product.image" alt="Product Image" style="display: block; margin: 2rem auto 0; border-radius: 20px; width:150px; height:150px;"/>
           </RouterLink>
@@ -73,20 +73,20 @@ import TheToolbar from "/public/the-toolbar.component.vue";
 
 <script>
 import {ProductsApiService} from "/src/services/products-api.service.js";
-import Carrito from "/src/product/shopping-cart.vue";
+import ShoppingCart from "/src/product/shopping-cart.vue";
 export default {
   name: 'list-products',
-  components: {Carrito},
+  components: {ShoppingCart},
   data() {
     return {
       products: [],
       artisans: [],
-      carrito: [],
+      shoppingCart: [],
       productsApiService : new ProductsApiService()
     }
   },
-  mounted() {
-    this.refresh();
+  async mounted() {
+    await this.refresh();
   },
   computed: {
     productWithArtisanName() {
@@ -99,23 +99,21 @@ export default {
     }
   },
   methods: {
-    async setArtisanId(id) {
+    setArtisanId(id) {
       sessionStorage.setItem('artisanId', id);
     },
     async refresh() {
       const responseProducts = await this.productsApiService.getProducts();
       this.products = responseProducts.data;
-
       const responseArtisans = await this.productsApiService.getArtisans();
       this.artisans = responseArtisans.data;
     },
-    agregarAlCarrito(producto) {
-      console.log(producto);
-      alert("Producto agregado al carrito!");
-      this.carrito.push({ ...producto, quantity: 1 });
+    addToCart(product) {
+      alert("Product added to Cart!");
+      this.shoppingCart.push({ ...product, quantity: 1 });
     },
-    eliminarDelCarrito(index) {
-      this.carrito.splice(index, 1);
+    deleteFromCart(index) {
+      this.shoppingCart.splice(index, 1);
     }
   }
 }

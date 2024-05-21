@@ -1,22 +1,22 @@
 import axios from "axios";
 
 const http = axios.create({
-    baseURL:'https://my-json-server.typicode.com/'
+    baseURL:'http://localhost:3000'
 })
 export class ProductsApiService {
     async getProducts() {
-        return await http.get('alehandraxx/maki-products/products');
+        return await http.get('/products');
     }
     async getProductById(id) {
-        return await http.get('alehandraxx/maki-products/products/'+id)
+        return await http.get('/products/'+id)
     }
     async getArtisans() {
-        return await http.get('alehandraxx/maki-artisans/artisan');
+        return await http.get('/artisan');
     }
     async createProduct(body) {
-        return await http.post('alehandraxx/maki-products/products',body)
+        return await http.post('/products',body)
     }
     async getProductsByArtisan(artisanId) {
-        return await http.get(`alehandraxx/maki-products/products?artisan=${artisanId}`);
+        return await http.get(`/products?artisan=${artisanId}`);
     }
 }
