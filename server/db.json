@@ -234,6 +234,22 @@
       "artisan": "2",
       "category": 4,
       "material": "Arcilla / Clay"
+    },
+    {
+      "name": "Peluche de llama",
+      "description": "Peluche infantil peruano.",
+      "price": "20",
+      "width": "20 cm",
+      "height": "30 cm",
+      "depth": "n/a",
+      "material": "Algodón",
+      "category": {
+        "name": "Juguetes",
+        "id": 5
+      },
+      "image": "https://www.cuyarts.com.pe/wp-content/uploads/2016/05/IMG_0856-scaled.jpg",
+      "id": "9",
+      "artisan": "2"
     }
   ],
   "category": [
@@ -276,25 +292,6 @@
       "caracteristics": "Buenas, me gustaria que diseñara un mate con este diseño porque me representa jaja. Estaré atento a su respuesta. Gracias",
       "photo": "https://shorturl.at/ciCM9",
       "UserId": 2
-    },
-    {
-      "id": "3",
-      "name": "asdasdas",
-      "caracterstics": "adasdsadasda",
-      "image": "",
-      "UserId": 3
-    },
-    {
-      "id": "3",
-      "name": "",
-      "caracterstics": "",
-      "image": ""
-    },
-    {
-      "id": "688d2944-b771-4e0a-9e75-d65b51fd72c7",
-      "name": "adas",
-      "caracterstics": "222",
-      "image": ""
     }
   ]
 }
