@@ -11,7 +11,7 @@
         <div class="card flex flex-wrap justify-content-center gap-3">
           <pv-icon-field iconPosition="left">
             <pv-input-icon class="search-icon"> <i class="pi pi-search" aria-hidden="true"></i> </pv-input-icon>
-            <pv-input-text class="search-bar" placeholder="Buscar " />
+            <pv-input-text class="search-bar" placeholder="Buscar" />
           </pv-icon-field>
         </div>
       </template>
