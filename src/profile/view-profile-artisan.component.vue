@@ -12,8 +12,8 @@ import TheToolbar from "/public/the-toolbar.component.vue";
         <PvButton @click="goBackToProducts()"  class="btn btn-back"> < </PvButton>
       </div>
       <div class="design-buttons">
-        <RouterLink to="/design-request"><PvButton  class="btn btn-mail"> Pedidos </PvButton></RouterLink>
-        <RouterLink to="/upload"><PvButton class ="add-btn" @click=""><i class="pi pi-plus">Agregar Productos</i></PvButton></RouterLink>
+        <RouterLink to="/design-request"><PvButton  class="btn btn-mail"> {{$t('orders')}} </PvButton></RouterLink>
+        <RouterLink to="/upload"><PvButton class ="add-btn" @click=""><i class="pi pi-plus">{{$t('addProduct')}}</i></PvButton></RouterLink>
         
       </div>
 
@@ -34,22 +34,22 @@ import TheToolbar from "/public/the-toolbar.component.vue";
     <div class="artisan-info-container">
       <div>
         <h2> {{ artisan.email}}</h2>
-        <h2> Provincia: {{artisan.province}}</h2>
-        <h2> Edad: {{artisan.age}} años</h2>
-        <h2> Sobre mi: {{artisan.info}}</h2>
+        <h2> {{ $t('province') }}: {{artisan.province}}</h2>
+        <h2> {{$t('age')}}: {{artisan.age}} {{$t('years')}}</h2>
+        <h2> {{$t('aboutme')}}: {{artisan.info}}</h2>
         <Pv-Rating v-model="value" :cancel="false" />
       </div>
     </div>
 
     <div class="design-buttons">
-      <ul><PvButton @click="editProfile()" class="btn btn-edit">Editar Informacion</PvButton></ul>
+      <ul><PvButton @click="editProfile()" class="btn btn-edit">{{$t('editInformation')}}</PvButton></ul>
     </div>
   </div>
 
   <div class="Prodcuts-card-container">
 
     <div class="featured-container">
-      <h1>Productos </h1>
+      <h1>{{ $t('products') }} </h1>
     </div>
 
     <div class = "card">
@@ -61,7 +61,7 @@ import TheToolbar from "/public/the-toolbar.component.vue";
         </template>
         <template #content>
           <RouterLink :to="{ path: '/products/' + product.id }"><p style="font-weight: bold;">{{ product.name }}</p></RouterLink>
-          <p>hecho por</p><RouterLink @click="setArtisanId(product.artisanId)" to="/profile-artisan-comercial" style="color: #238ACF;">{{ product.artisanName }}</RouterLink>
+          <p>{{$t('madeBy')}}</p><RouterLink @click="setArtisanId(product.artisanId)" to="/profile-artisan-comercial" style="color: #238ACF;">{{ product.artisanName }}</RouterLink>
           <p style="font-weight: bold; text-align: right;">s/. {{ product.price }}</p>
         </template>
       </PvCard>

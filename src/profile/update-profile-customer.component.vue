@@ -12,27 +12,27 @@ import TheToolbar from "/public/the-toolbar.component.vue";
     <div class="customer-form">
 
         <div>
-          <p>Email:</p>
+          <p>{{$t('email')}}:</p>
           <pv-input-text class = 'customer-email' type="text" v-model="customerEmail"> </pv-input-text>
         </div>
 
         <div>
-            <p>Nombre:</p>
+            <p>{{$t('name')}}:</p>
             <pv-input-text class = 'customer-name' type="text" v-model="customerName"> </pv-input-text>
         </div>
 
         <div>
-          <p>Apellido:</p>
+          <p>{{$t('lastName')}}:</p>
           <pv-input-text class = 'customer-surname' type="text" v-model="customerSurname"> </pv-input-text>
         </div>
 
         <div>
-          <p>Telefono:</p>
+          <p>{{$t('phone')}}:</p>
           <pv-input-text class = 'customer-phone' type="text" v-model="customerPhone"> </pv-input-text>
         </div>
 
         <div>
-          <p>Direccion:</p>
+          <p>{{$t('address')}}:</p>
           <pv-input-text class = 'customer-address' type="text" v-model="customerAddress"> </pv-input-text>
         </div>
 
@@ -40,29 +40,29 @@ import TheToolbar from "/public/the-toolbar.component.vue";
 
     <div class="customer-form-2">
       <div>
-        <p>URL Foto:</p>
+        <p>{{$t('photoURL')}}:</p>
         <pv-input-text class = 'customer-photo' type="text" v-model="customerPhoto"> </pv-input-text>
       </div>
 
       <div>
-        <p>Edad:</p>
+        <p>{{ $t('age') }}:</p>
         <pv-input-text class = 'customer-age' type="text" v-model="customerAge"> </pv-input-text>
       </div>
 
       <div>
-        <p>Provincia: </p>
+        <p>{{$t('province')}}: </p>
         <pv-input-text class = 'customer-province' type="text" v-model="customerProvince"> </pv-input-text>
       </div>
 
       <div>
-        <p>Descripción: </p>
+        <p>{{$t('description')}}: </p>
         <pv-input-text class='customer-info' type="text" v-model="customerInfo"></pv-input-text>
       </div>
 
     </div>
 
     <div class="btnUpdate">
-      <PvButton class = 'UpdateProfile-btn' @click="update()"> Actualizar Perfil </PvButton>
+      <PvButton class = 'UpdateProfile-btn' @click="update()"> {{$t('updateProfile')}} </PvButton>
     </div>
 
   </div>

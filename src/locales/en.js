@@ -59,6 +59,18 @@ const en ={
     descriptionProduct: 'Description',
     category: 'Category',
     uploadProduct: 'Upload Product',
+    province: 'Province',
+    age: 'Age',
+    years: 'years',
+    aboutme: 'About me',
+    editInformation: 'Edit Information',
+    addProduct: 'Add Product',
+    orders: 'Orders',
+    products: 'Products',
+    requestDesign: 'Request Design',
+    description: 'Description',
+    updateProfile: 'Update Profile',
+    photoURL: 'Photo URL',
 }
 
 export default en;

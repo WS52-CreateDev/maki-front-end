@@ -12,32 +12,32 @@ import TheToolbar from "/public/the-toolbar.component.vue";
     <div class="artisan-form">
 
       <div>
-        <p>Email:</p>
+        <p>{{$t('email')}}:</p>
         <pv-input-text class = 'artisan-email' type="text" v-model="artisanEmail"> </pv-input-text>
       </div>
 
       <div>
-        <p>Nombre:</p>
+        <p>{{$t('name')}}:</p>
         <pv-input-text class = 'artisan-name' type="text" v-model="artisanName"> </pv-input-text>
       </div>
 
       <div>
-        <p>Apellido:</p>
+        <p>{{$t('lastName')}}:</p>
         <pv-input-text class = 'artisan-surname' type="text" v-model="artisanSurname"> </pv-input-text>
       </div>
 
       <div>
-        <p>Telefono:</p>
+        <p>{{$t('phone')}}:</p>
         <pv-input-text class = 'artisan-phone' type="text" v-model="artisanPhone"> </pv-input-text>
       </div>
 
       <div>
-        <p>Direccion:</p>
+        <p>{{$t('address')}}:</p>
         <pv-input-text class = 'artisan-address' type="text" v-model="artisanAddress"> </pv-input-text>
       </div>
 
       <div>
-        <p>URL Foto:</p>
+        <p>{{$t('photoURL')}}:</p>
         <pv-input-text class = 'artisan-photo' type="text" v-model="artisanPhoto"> </pv-input-text>
       </div>
 
@@ -45,34 +45,34 @@ import TheToolbar from "/public/the-toolbar.component.vue";
 
     <div class="artisan-form-2">
       <div>
-        <p>Edad:</p>
+        <p>{{$t('age')}}:</p>
         <pv-input-text class = 'artisan-age' type="text" v-model="artisanAge"> </pv-input-text>
       </div>
 
       <div>
-        <p>Provincia: </p>
+        <p>{{$t('province')}}: </p>
         <pv-input-text class = 'artisan-province' type="text" v-model="artisanProvince"> </pv-input-text>
       </div>
 
       <div>
-        <p>Descripción: </p>
+        <p>{{$t('description')}}: </p>
         <pv-input-text class='artisan-info' type="text" v-model="artisanInfo"></pv-input-text>
       </div>
 
       <div>
-        <p>Nombre de Negocios: </p>
+        <p>{{$t('businessName')}}: </p>
         <pv-input-text class='artisan-businessName' type="text" v-model="artisanBusinessName"></pv-input-text>
       </div>
 
       <div>
-        <p>Direccion de Negocios: </p>
+        <p>{{$t('businessAddress')}}: </p>
         <pv-input-text class='artisan-businesAddress' type="text" v-model="artisanBusinessAddress"></pv-input-text>
       </div>
 
     </div>
 
     <div class="btnUpdate">
-      <PvButton class = 'UpdateProfile-btn' @click="update()"> Actualizar Perfil </PvButton>
+      <PvButton class = 'UpdateProfile-btn' @click="update()"> {{$t('updateProfile')}} </PvButton>
     </div>
 
   </div>

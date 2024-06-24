@@ -28,22 +28,22 @@ import TheToolbar from "/public/the-toolbar.component.vue";
     <div class="artisan-info-container">
       <div>
         <h2> {{ artisan.email}}</h2>
-        <h2> Provincia: {{artisan.province}}</h2>
-        <h2> Edad: {{artisan.age}} años</h2>
-        <h2> Sobre mi: {{artisan.info}}</h2>
+        <h2> {{$t('province')}}: {{artisan.province}}</h2>
+        <h2> {{$t('age')}}: {{artisan.age}} {{$t('years')}}</h2>
+        <h2> {{$t('aboutme')}}: {{artisan.info}}</h2>
         <Pv-Rating v-model="value" :cancel="false" />
       </div>
     </div>
 
     <div class="design-buttons">
-      <ul><RouterLink to="/custom-design"><PvButton class="btn btn-edit">Solicitar Diseño</PvButton></RouterLink></ul>
+      <ul><RouterLink to="/custom-design"><PvButton class="btn btn-edit">{{$t('requestDesign')}}</PvButton></RouterLink></ul>
     </div>
   </div>
 
   <div class="Prodcuts-card-container">
 
     <div class="featured-container">
-      <h1>Productos </h1>
+      <h1>{{$t('products')}} </h1>
     </div>
 
     <div class = "card">
@@ -55,7 +55,7 @@ import TheToolbar from "/public/the-toolbar.component.vue";
         </template>
         <template #content>
           <RouterLink :to="{ path: '/products/' + product.id }"><p style="font-weight: bold;">{{ product.name }}</p></RouterLink>
-          <p>hecho por</p><RouterLink @click="setArtisanId(product.artisanId) "to="/profile-artisan-comercial" style="color: #238ACF;">{{ product.artisanName }}</RouterLink>
+          <p>{{$t('madeby')}}</p><RouterLink @click="setArtisanId(product.artisanId) "to="/profile-artisan-comercial" style="color: #238ACF;">{{ product.artisanName }}</RouterLink>
           <p style="font-weight: bold; text-align: right;">s/. {{ product.price }}</p>
         </template>
       </PvCard>

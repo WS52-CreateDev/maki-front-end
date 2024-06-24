@@ -25,22 +25,22 @@ import TheToolbar from "/public/the-toolbar.component.vue";
     <div class="customer-info-container">
       <div>
         <h2> {{ customer.email}}</h2>
-        <h2> Provincia: {{customer.province}}</h2>
-        <h2> Edad: {{customer.age}} años</h2>
-        <h2> Sobre mi: {{customer.info}}</h2>
+        <h2> {{$t('province')}}: {{customer.province}}</h2>
+        <h2> {{$t('age')}}: {{customer.age}} {{$t('years')}}</h2>
+        <h2> {{$t('aboutme')}}: {{customer.info}}</h2>
         <Pv-Rating v-model="value" :cancel="false" />
       </div>
     </div>
 
     <div class="design-buttons">
-      <ul><PvButton @click="editProfile()" class="btn btn-edit">Editar Informacion</PvButton></ul>
+      <ul><PvButton @click="editProfile()" class="btn btn-edit">{{$t('editInformation')}}</PvButton></ul>
     </div>
   </div>
 
   <div class="Prodcuts-card-container">
 
     <div class="featured-container">
-      <h1>Productos </h1>
+      <h1>{{$t('products')}} </h1>
     </div>
 
    <div class = "card">
@@ -52,7 +52,7 @@ import TheToolbar from "/public/the-toolbar.component.vue";
         </template>
         <template #content>
           <RouterLink :to="{ path: '/products/' + product.id }"><p style="font-weight: bold;">{{ product.name }}</p></RouterLink>
-          <p>hecho por</p><RouterLink  @click="setArtisanId(product.artisanId)"  to="/profile-artisan-comercial" style="color: #238ACF;">{{ product.artisanName }}</RouterLink>
+          <p>{{$t('madeBy')}}</p><RouterLink  @click="setArtisanId(product.artisanId)"  to="/profile-artisan-comercial" style="color: #238ACF;">{{ product.artisanName }}</RouterLink>
           <p style="font-weight: bold; text-align: right;">s/. {{ product.price }}</p>
         </template>
       </PvCard>
@@ -104,7 +104,7 @@ export default {
     },
 
     async editProfile(){
-      router.push({ path: '/update-profile'});
+      router.push({ path: '/update-profile-customer'});
     },
     async refresh() {
       const userId = sessionStorage.getItem('userId')

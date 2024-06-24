@@ -60,6 +60,18 @@ const es = {
     descriptionProduct: 'Descripción',
     category: 'Categoria',
     uploadProduct: 'Subir Producto',
+    province: 'Provincia',
+    age: 'Edad',
+    years: 'años',
+    aboutme: 'Acerca de mi',
+    editInformation: 'Editar Información',
+    addProduct: 'Agregar Producto',
+    orders: 'Pedidos',
+    products: 'Productos',
+    requestDesign: 'Solicitar Diseño',
+    description: 'Descripción',
+    updateProfile: 'Actualizar Perfil',
+    photoURL: 'URL de la Foto',
 }
 
 export default  es

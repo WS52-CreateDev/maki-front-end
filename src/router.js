@@ -36,7 +36,7 @@ const router=createRouter({
         {path: '/upload', component: PostProductComponent},
         {path:'/profile-customer',component:viewProfileCustomerComponent},
         {path:'/profile-artisan', component:viewProfileArtisanComponent},
-        {path:'/update-profile', component:updateProfileComponent},
+        {path:'/update-profile-customer', component:updateProfileComponent},
         {path:'/profile-artisan-comercial',component:viewProfileArtisanComercialComponent},
         {path:'/update-profile-artisan',component:updateProfileArtisanComponent},
         {path: '/design-request', component:designRequestComponent},
