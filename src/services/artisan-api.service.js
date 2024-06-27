@@ -1,28 +1,28 @@
 import axios from 'axios';
 
 const http = axios.create({
-    baseURL: 'http://localhost:3000',
+    baseURL: 'http://localhost:5122/api',
 });
 
 export class ArtisanApiService {
     async getAll() {
-        return await http.get('/artisan');
+        return await http.get('/Artisan');
     }
 
     async getById(id) {
-        return await http.get('/artisan/' + id);
+        return await http.get('/Artisan/' + id);
     }
 
     async create(body) {
-        return await http.post('artisan/', body);
+        return await http.post('/Artisan/', body);
     }
 
-    async update(body,id){
-        return await http.put('/artisan/' + id,body);
+    async update(id,body){
+        return await http.put('/Artisan/' + id,body);
     }
 
-    async loginArtisan(email, password) {
-        return http.get(`/artisan?email=${email}&password=${password}`);
+    async loginArtisan(body) {
+        return http.post(`/Artisan/login`, body);
     }
 
 }

@@ -86,7 +86,7 @@ export default {
   name: "updateProfileArtisan",
   data(){
     return{
-
+      artisanId: '',
       artisanName: '',
       artisanSurname: '',
       artisanPhone:'',
@@ -111,6 +111,7 @@ export default {
 
     async update() {
       const body ={
+        id: this.artisanId,
         name: this.artisanName,
         surname: this.artisanSurname,
         phone: this.artisanPhone,
@@ -121,12 +122,11 @@ export default {
         province: this.artisanProvince,
         info: this.artisanInfo,
         password: this.artisanPassword,
-        isArtisan: this.artisanisArtisan,
         businessName: this.artisanBusinessName,
         businessAddress: this.artisanBusinessAddress,
       }
-      const userId = sessionStorage.getItem('userId');
-      const responseUpdate = await this.ArtisanApiService.update(body,userId);
+      const userId = this.artisanId;
+      const responseUpdate = await this.ArtisanApiService.update(userId,body);
 
       if(responseUpdate.status == 200){
         alert("artisan updated successfully.");
@@ -138,9 +138,10 @@ export default {
     },
 
     async refresh(){
-      const userId = sessionStorage.getItem('userId')
+      const userId = sessionStorage.getItem('userId');
       const responseartisan = await this.ArtisanApiService.getById(userId);
       this.artisan = responseartisan.data;
+      this.artisanId = responseartisan.data.id;
       this.artisanName = responseartisan.data.name;
       this.artisanSurname = responseartisan.data.surname;
       this.artisanPhone = responseartisan.data.phone;
@@ -151,7 +152,6 @@ export default {
       this.artisanProvince = responseartisan.data.province;
       this.artisanInfo = responseartisan.data.info;
       this.artisanPassword= responseartisan.data.password;
-      this.artisanisArtisan = responseartisan.data.isArtisan;
       this.artisanBusinessName = responseartisan.data.businessName;
       this.artisanBusinessAddress = responseartisan.data.businessAddress;
     }

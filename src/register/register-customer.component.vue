@@ -71,9 +71,11 @@ export default {
         phone: this.phone,
         address: this.address,
         email: this.email,
+        photo: '',
+        age: 18,
+        province: '',
+        info: '',
         password: this.password,
-        photo: this.photo,
-        isArtisan: 0
       };
 
       const response = await this.customerApiService.create(body);

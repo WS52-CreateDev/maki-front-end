@@ -34,6 +34,7 @@
 <script>
 import router from "../router.js";
 import {CustomerApiService} from "../services/customer-api.service..js";
+import {ArtisanApiService} from "../services/artisan-api.service.js";
 
 export default {
   name: "LoginCustomer",
@@ -52,18 +53,17 @@ export default {
       };
 
       const response = await this.customerApiService.loginCustomer(
-          body.email,
-          body.password
+          body
       );
 
-      if (response.data.length > 0) {
-        const userId = response.data[0].id;
-        const isArtisan = response.data[0].isArtisan;
+      if (response.data && response.data.id) {
+        const userId = response.data.id;
+        const isArtisan = 0;
         sessionStorage.setItem('userId', userId);
         sessionStorage.setItem('isArtisan', isArtisan);
         alert("Login successful");
         router.push({ path: '/products'});
-        this.$store.commit("SET_CUSTOMER", response.data[0]);
+        this.$store.commit("SET_CUSTOMER", response.data);
       } else {
         alert("Invalid email or password.");
       }

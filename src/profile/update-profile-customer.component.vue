@@ -76,7 +76,7 @@ import TheToolbar from "/public/the-toolbar.component.vue";
     name: "updateProfile",
     data(){
       return{
-
+        customerId: '',
         customerName: '',
         customerSurname: '',
         customerPhone:'',
@@ -87,7 +87,6 @@ import TheToolbar from "/public/the-toolbar.component.vue";
         customerProvince: '',
         customerInfo: '',
         customerPassword: '',
-        customerProducts:[],
         customer: [],
         CustomerApiService: new CustomerApiService()
       }
@@ -99,6 +98,7 @@ import TheToolbar from "/public/the-toolbar.component.vue";
 
       async update() {
         const body ={
+          id: this.customerId,
           name: this.customerName,
           surname: this.customerSurname,
           phone: this.customerPhone,
@@ -109,11 +109,9 @@ import TheToolbar from "/public/the-toolbar.component.vue";
           province: this.customerProvince,
           info: this.customerInfo,
           password: this.customerPassword,
-          isArtisan: this.customerisArtisan,
-          products : this.customerProducts
         }
-        const userId = sessionStorage.getItem('userId')
-        const responseUpdate = await this.CustomerApiService.update(body,userId);
+        const userId = this.customerId;
+        const responseUpdate = await this.CustomerApiService.update(userId,body);
 
         if(responseUpdate.status == 200){
           alert("Customer updated successfully.");
@@ -128,6 +126,7 @@ import TheToolbar from "/public/the-toolbar.component.vue";
         const userId = sessionStorage.getItem('userId');
         const responseCustomer = await this.CustomerApiService.getById(userId);
         this.customer = responseCustomer.data;
+        this.customerId = responseCustomer.data.id;
         this.customerName = responseCustomer.data.name;
         this.customerSurname = responseCustomer.data.surname;
         this.customerPhone = responseCustomer.data.phone;
@@ -138,8 +137,6 @@ import TheToolbar from "/public/the-toolbar.component.vue";
         this.customerProvince = responseCustomer.data.province;
         this.customerInfo = responseCustomer.data.info;
         this.customerPassword= responseCustomer.data.password;
-        this.customerisArtisan = responseCustomer.data.isArtisan;
-        this.customerProducts = responseCustomer.data.products;
       }
     }
   }

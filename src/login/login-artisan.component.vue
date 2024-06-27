@@ -52,18 +52,16 @@ export default {
       };
 
       const response = await this.artisanApiService.loginArtisan(
-          body.email,
-          body.password
+          body
       );
 
-      if (response.data.length > 0) {
+      if (response.data && response.data.id) {
         alert("Login successful.");
-        const userId = response.data[0].id;
-        const isArtisan = response.data[0].isArtisan;
+        const userId = response.data.id;
         sessionStorage.setItem('userId', userId);
-        sessionStorage.setItem('isArtisan', isArtisan);
+        sessionStorage.setItem('isArtisan',1)
         router.push({ path: '/products' });
-        this.$store.commit("SET_ARTISAN", response.data[0]);
+        this.$store.commit("SET_ARTISAN", response.data);
       } else {
         alert("Invalid email or password.");
       }

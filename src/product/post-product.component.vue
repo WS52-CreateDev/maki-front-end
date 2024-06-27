@@ -114,12 +114,14 @@ export default {
         name: this.name,
         description: this.description,
         price: this.price,
+        image: this.image,
         width: this.width,
         height: this.height,
         depth: this.depth,
         material: this.material,
-        category: this.category,
-        image: this.image
+        artisanId: sessionStorage.getItem('userId'),
+        category: this.category.id,
+
       }
 
       const response = await this.productsApiService.createProduct(body)

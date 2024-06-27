@@ -86,11 +86,13 @@ export default {
         phone: this.phone,
         address: this.address,
         email: this.email,
+        photo: '',
+        age: 18,
+        province: '',
+        info: '',
         businessName: this.businessName,
         businessAddress: this.businessAddress,
         password: this.password,
-        photo: this.photo,
-        isArtisan: 1
       };
 
       const response = await this.artisanApiService.create(body);
